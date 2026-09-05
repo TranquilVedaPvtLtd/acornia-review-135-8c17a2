@@ -1,0 +1,19 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:06.320
+Operational conversations and delivery status share one workspace. No business number is connected.
+
+00:00:06.320 --> 00:00:13.040
+Within the sample service window, staff can simulate a specific operational reply.
+
+00:00:13.040 --> 00:00:19.240
+When the service window is closed, a relevant approved template is required.
+
+00:00:19.240 --> 00:00:25.480
+The template preview appears in the conversation. This demonstration sends no external message.
+
+00:00:25.480 --> 00:00:32.240
+An opt-out blocks further messages, including automated retries.
+
+00:00:32.240 --> 00:00:37.560
+Review the failure, consent and duplicate checks before retrying. Delivery is never guaranteed.
