@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
+  <title>Acornia | Requirements review</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="review.js"></script>
+</head>
+<body>
+  <a class="skip" href="#requirements">Skip to requirements</a>
+  <header class="masthead"><a class="brand" href="#top">Acornia<span>Requirements review</span></a><span>Prepared by Tranquil Veda</span></header>
+  <main id="top">
+    <section class="intro" aria-labelledby="title">
+      <p class="eyebrow">Discussion review 135</p>
+      <h1 id="title">Agree the details.<br>Then build the right things.</h1>
+      <p class="lead">A structured review of the platform changes discussed in the recording. Review each requirement, approve its exact scope, or explain what needs to change.</p>
+      <p id="source-note" class="muted">The recording and full transcript remain private.</p>
+      <div class="summary" id="summary" aria-label="Document summary"></div>
+    </section>
+    <section class="review-note" aria-labelledby="review-title">
+      <h2 id="review-title">Your review controls the next step</h2>
+      <p>Requirements are not automatically approved because they were discussed. Proposed acceptance checks are included for your review. An approval applies only to the displayed revision. Changes to scope require fresh approval.</p>
+      <p><strong>Nothing here starts implementation or a production deployment.</strong> We will first reconcile your comments and the existing tracker, then agree the implementation batch.</p>
+      <p id="persistence-note" role="status">Review saving is not configured. This is a read-only working preview. Please do not enter review comments yet.</p>
+    </section>
+    <section id="batch-review" class="review-note" aria-labelledby="batch-title" hidden>
+      <h2 id="batch-title">Submit your decisions together</h2>
+      <p>Choose decisions below, then copy the batch. Open the private GitHub submission, paste the copied text into the issue body and press <strong>Submit new issue</strong>. Your comments are never placed in the link.</p>
+      <p>Draft recovery is <strong>on this device only</strong>. It is not a submitted review. Do not enter passwords or customer financial details. Clear device drafts explicitly when finished.</p>
+      <div class="batch-actions"><button type="button" id="copy-batch">Copy review batch</button><a id="open-review" class="button" target="_blank" rel="noopener noreferrer">Open private GitHub submission</a><a id="review-history" target="_blank" rel="noopener noreferrer">Private review history</a></div>
+      <label id="batch-part-label" for="batch-part" hidden>Submission part<select id="batch-part"></select></label>
+      <p id="batch-note" role="status">Submit on GitHub to save privately. Submission not verified here.</p>
+      <p id="draft-status" role="status"></p>
+      <div class="batch-actions"><button type="button" id="backup-drafts">Download all draft versions</button><button type="button" id="clear-drafts">Clear device drafts</button></div>
+    </section>
+    <div class="workspace">
+      <aside>
+        <nav id="modules" aria-label="Modules"></nav>
+        <div class="tools"><button type="button" id="expand">Expand all details</button><button type="button" id="print">Print this document</button><button type="button" id="export">Download requirements</button></div>
+      </aside>
+      <div>
+        <div class="filters">
+          <label for="search">Find a requirement<input id="search" type="search" placeholder="Search titles, scope or IDs" autocomplete="off"></label>
+          <label for="kind">Discussion type<select id="kind"><option value="">All types</option></select></label>
+        </div>
+        <p id="results" class="muted" aria-live="polite"></p>
+        <div id="requirements" tabindex="-1"></div>
+        <p id="empty" hidden>No requirements match your search.</p>
+        <section class="closing" id="open-questions"><h2>Before implementation</h2><ol><li>Resolve uncertain wording and conflicting rules from the discussion.</li><li>Confirm the requirement scope and proposed acceptance checks.</li><li>Reconcile overlapping work with the existing tracker. A cached status is not live verification.</li><li>Authorize a specific implementation batch, followed by testing and deployment.</li></ol></section>
+      </div>
+    </div>
+  </main>
+  <footer><span>Acornia · Tranquil Veda</span><span id="revision-note">Working draft</span></footer>
+  <noscript><p class="error">JavaScript is needed to display the review document. Download the requirements JSON or enable JavaScript.</p></noscript>
+</body>
+</html>

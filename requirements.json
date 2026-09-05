@@ -1,0 +1,2183 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "recording-135",
+  "version": 1,
+  "versionLabel": "Review version 1 · Prepared 5 September 2026",
+  "durationLabel": "1h 52m",
+  "sourceNote": "Prepared from the full 1h 52m recording. The opening two minutes and some distant passages remain unclear. The recording, full transcript and private review comments are not published here. Section times are approximate source bounds; the meeting date and speaker identities are not assumed.",
+  "trackerSnapshot": "5 September 2026, 11:00:40 IST. Reference only; not refreshed or independently verified for this review.",
+  "review": {
+    "enabled": true,
+    "repository": "TranquilVedaPvtLtd/acornia-review-135-records"
+  },
+  "modules": [
+    "HR and payroll",
+    "Tasks and transaction workflows",
+    "Activities and investor timeline",
+    "Data imports and reporting",
+    "Team communication and WhatsApp",
+    "Financial transactions and navigation",
+    "Performance and appraisals",
+    "Review, rollout and adoption",
+    "Future intelligence and assistants"
+  ],
+  "requirements": [
+    {
+      "id": "R135-001",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Requirement",
+      "title": "Two-level payroll approval",
+      "scope": "HR prepares payroll and a final authority approves it before finalization.",
+      "acceptance": [
+        "Preparation and final approval are separate authorized actions.",
+        "An employee without the appropriate HR or final-approval permission cannot perform those actions."
+      ],
+      "dependencies": [
+        "Agreed payroll approver role and delegation policy"
+      ],
+      "questions": [
+        "Who is the final approver, and must the maker and checker always be different people?"
+      ],
+      "intervals": [
+        "00:11:30-00:16:30"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "2ccb9acf9e944cd215df4a9be7fb2d9132567ff0b6ca18558c651fdb7343d37f"
+    },
+    {
+      "id": "R135-002",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Requirement",
+      "title": "Employee salary component breakdown",
+      "scope": "Maintain the calculation and component breakdown used for each employee's payroll submission.",
+      "acceptance": [
+        "The preparer and approver can inspect each employee's component breakdown and resulting salary."
+      ],
+      "dependencies": [
+        "Approved salary formulas and employee master data"
+      ],
+      "questions": [
+        "Which components, deductions, effective dates and rounding rules apply?"
+      ],
+      "intervals": [
+        "00:11:30-00:16:30"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "3852df6677853a375ef89877bd406c87a569da7f8d9cd28219550235c7675db2"
+    },
+    {
+      "id": "R135-003",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Requirement",
+      "title": "Employee self-service and administrator visibility",
+      "scope": "Employees see their own payroll and attendance; authorized admin/super-admin users manage organization-wide salary, attendance and leave information.",
+      "acceptance": [
+        "An employee cannot access another employee's salary or attendance through either the UI or direct requests.",
+        "Authorized HR administrators can view and manage the employees within their agreed scope."
+      ],
+      "dependencies": [
+        "HR permission matrix"
+      ],
+      "questions": [
+        "What visibility should reporting managers have, and how do policies/team views fit the self-service role?"
+      ],
+      "intervals": [
+        "00:11:30-00:16:30",
+        "00:21:10-00:26:10"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "a5cb0e17bb3d1c6791e4df7c5c7a27e818b2a8508d7c88e8803f913c7bc1c507"
+    },
+    {
+      "id": "R135-004",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Requirement",
+      "title": "HR hierarchy independent of CRM role",
+      "scope": "Allow employee and HR-management access to differ even among people who share the relationship-manager CRM role.",
+      "acceptance": [
+        "Two users with the same CRM role can hold different authorized HR responsibilities.",
+        "HR hierarchy controls are not inferred solely from the CRM role label."
+      ],
+      "dependencies": [
+        "Reporting hierarchy and permission matrix"
+      ],
+      "questions": [
+        "Which HR roles exist and who may assign them?"
+      ],
+      "intervals": [
+        "00:16:20-00:26:10"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "d93f82f509236c3d79200ff645e0f8d367b56020e13df7c24214b7f9534e5883"
+    },
+    {
+      "id": "R135-005",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Requirement",
+      "title": "Self-service payslip retrieval",
+      "scope": "Employees can retrieve and download their own payslips, including for bank or loan applications.",
+      "acceptance": [
+        "An employee can retrieve their own available payslip.",
+        "Payslip access does not expose another employee's payroll."
+      ],
+      "dependencies": [
+        "Finalized payroll and approved payslip format"
+      ],
+      "questions": [
+        "Is PDF sufficient, or is an Excel export also required?"
+      ],
+      "intervals": [
+        "00:16:20-00:21:20"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "6e676bca9311888426131ac300fc80052943990f8a7716f671c6096731ae0aa7"
+    },
+    {
+      "id": "R135-006",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Requirement",
+      "title": "Attendance regularization requests",
+      "scope": "Provide regularization for out-of-office work and missing or incorrect attendance times, with the affected day/time and reason.",
+      "acceptance": [
+        "An employee can submit a dated attendance correction with its reason.",
+        "Pending regularization is distinct from approved attendance."
+      ],
+      "dependencies": [
+        "Attendance records and regularization policy"
+      ],
+      "questions": [
+        "What evidence, submission deadline, grace period and retroactive limits apply?"
+      ],
+      "intervals": [
+        "00:11:30-00:21:20"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "521eeee1f84c45349976dc7d18baa55456687ec9cdff4f023d4d8912b9879aa8"
+    },
+    {
+      "id": "R135-007",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Requirement",
+      "title": "Hierarchical regularization approval",
+      "scope": "Route attendance regularization requests to an authorized approver in the employee's reporting hierarchy.",
+      "acceptance": [
+        "Requests reach the correct authorized approver.",
+        "Users outside the permitted approval scope cannot approve a request."
+      ],
+      "dependencies": [
+        "Reporting hierarchy"
+      ],
+      "questions": [
+        "How many approval levels are needed, and who handles absent approvers?"
+      ],
+      "intervals": [
+        "00:21:10-00:26:10"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "35eba73800602b696a0fce70bd728323b890b580f1362e82bfcc121318fe42be"
+    },
+    {
+      "id": "R135-008",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Requirement",
+      "title": "Approved regularization updates attendance and pay",
+      "scope": "Approved attendance regularization should automatically reconcile into attendance and salary calculations without manual calendar-by-calendar re-entry.",
+      "acceptance": [
+        "An approved correction appears in the employee's attendance record/calendar.",
+        "The same approved correction is reflected in the applicable salary calculation."
+      ],
+      "dependencies": [
+        "Regularization approval",
+        "Payroll cutoff and recalculation policy"
+      ],
+      "questions": [
+        "What happens if payroll has already been approved or paid?"
+      ],
+      "intervals": [
+        "00:16:20-00:26:10"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "fc0d883fbc1dab05a8c511f41c2d716caea50032f21039e23cbb6a6cb5c1382f"
+    },
+    {
+      "id": "R135-009",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Requirement",
+      "title": "Laptop and mobile-web attendance",
+      "scope": "Support photo-based attendance on both laptop and mobile web, including the needs of staff working outside the office.",
+      "acceptance": [
+        "Eligible employees can record attendance using supported laptop and mobile-web flows.",
+        "Device support remains compatible with the agreed outside-office policy."
+      ],
+      "dependencies": [
+        "Camera access",
+        "Attendance location policy"
+      ],
+      "questions": [
+        "Which roles may check in outside the office, and what fallback is allowed when a camera is unavailable?"
+      ],
+      "intervals": [
+        "00:11:30-00:16:30"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "ea70a156453cbbd11c3a425c54025628d55f26260516a18cfbb7c2171c206c25"
+    },
+    {
+      "id": "R135-010",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Requirement",
+      "title": "Attendance calendar",
+      "scope": "Display attendance in an employee calendar view.",
+      "acceptance": [
+        "The employee can review attendance by day in a calendar.",
+        "Approved regularization and leave changes are reflected in that view."
+      ],
+      "dependencies": [
+        "Attendance and leave records"
+      ],
+      "questions": [
+        "Which day states and month/week views are required?"
+      ],
+      "intervals": [
+        "00:26:00-00:31:00"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "6f0bbe2c760192f7f343e484d75ffbafd459fc162059ae8bb778f6565c318f45"
+    },
+    {
+      "id": "R135-011",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Requirement",
+      "title": "Leave applications linked with attendance",
+      "scope": "Provide leave applications and allow an attendance shortfall or half-day to be handled against the selected eligible leave type.",
+      "acceptance": [
+        "Leave applications identify the requested dates and leave type.",
+        "The authorized handling of a half-day/absence can reconcile with leave and attendance."
+      ],
+      "dependencies": [
+        "Approved leave policy",
+        "Leave balances",
+        "Approval hierarchy"
+      ],
+      "questions": [
+        "Is a leave deduction automatic or explicitly approved for each attendance shortfall?"
+      ],
+      "intervals": [
+        "00:21:10-00:26:10",
+        "00:22:30-00:24:00"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "b1a244176d5ff0da1f8f51c9ba35c271457da175824063d47dd9579f67756748"
+    },
+    {
+      "id": "R135-012",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Needs clarification",
+      "title": "Leave-type half-day and full-day rules",
+      "scope": "Support full-day and half-day leave according to the approved leave-type policy. The transcript appears to specify casual leave as full-day only, with other exceptions requiring confirmation.",
+      "acceptance": [
+        "Leave duration choices follow a confirmed leave-type table.",
+        "A leave type cannot be booked in an unsupported fraction."
+      ],
+      "dependencies": [
+        "Written company leave policy"
+      ],
+      "questions": [
+        "Confirm casual, privilege, maternity and any other leave types separately; which permit half-days?"
+      ],
+      "intervals": [
+        "00:21:10-00:26:10",
+        "00:22:30-00:25:20"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "d28419eba4f4590d80737e53d195b061c7969d16141a4249a74b5b2c1254ab90"
+    },
+    {
+      "id": "R135-013",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Requirement",
+      "title": "Editable holiday and leave policy",
+      "scope": "Allow authorized administrators to edit the organization's holiday/leave rules and add a management-approved extra holiday.",
+      "acceptance": [
+        "An administrator can add an approved company holiday.",
+        "The revised holiday is reflected consistently in the relevant HR calendar and calculations."
+      ],
+      "dependencies": [
+        "Approved holiday calendar and policy"
+      ],
+      "questions": [
+        "Confirm annual entitlements and how market, government and company holidays relate; which rules are editable?"
+      ],
+      "intervals": [
+        "00:21:10-00:26:10",
+        "00:23:50-00:25:20"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "5426b7272c46febd64b3edfd7b8ebbdf8833dbbe0ecfdb7263917a31264f262b"
+    },
+    {
+      "id": "R135-014",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Requirement",
+      "title": "Accessible policies with yearly PDF records",
+      "scope": "Make HR policies available within the software and retain the relevant year's policy PDF as a record.",
+      "acceptance": [
+        "Employees can access the policies authorized for them.",
+        "The policy PDF can be associated with and retrieved for its applicable year."
+      ],
+      "dependencies": [
+        "Company-supplied policy PDFs",
+        "Document access rules"
+      ],
+      "questions": [
+        "Who uploads policies, and which historical versions must be retained?"
+      ],
+      "intervals": [
+        "00:11:30-00:16:30",
+        "00:21:10-00:26:10",
+        "00:25:10-00:26:40"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "35a2b9aca1bb197b105759647404b0234a6574c95bfa48ce115c488c4cb504f9"
+    },
+    {
+      "id": "R135-015",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Requirement",
+      "title": "Simple reporting and team structure",
+      "scope": "Provide a simple team/organization view showing reporting relationships.",
+      "acceptance": [
+        "A user can identify their reporting relationship and relevant team.",
+        "The visible organization structure matches the agreed employee hierarchy."
+      ],
+      "dependencies": [
+        "Reporting hierarchy"
+      ],
+      "questions": [
+        "Should everyone see the full organization or only their team/peers?"
+      ],
+      "intervals": [
+        "00:11:30-00:21:20"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "53d077fa71e859b3c48b73e8dc4b3df029bb819c32ba4e1d8b4848002bfe2748"
+    },
+    {
+      "id": "R135-016",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Requirement",
+      "title": "Profile-photo upload",
+      "scope": "Allow staff photos to be uploaded through a settings/profile area.",
+      "acceptance": [
+        "An authorized user can upload and update a staff/profile photo.",
+        "Photo-edit permissions follow the agreed ownership rules."
+      ],
+      "dependencies": [
+        "Photo storage and access policy"
+      ],
+      "questions": [
+        "Can staff update only their own photo, or may HR update all profiles?"
+      ],
+      "intervals": [
+        "00:16:20-00:21:20"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "00fd5fc6f17b8759c8353f99b28ba53ec7e13787576ec7f86e7d3502a20e4eac"
+    },
+    {
+      "id": "R135-017",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Requirement",
+      "title": "Employee profile and personnel documents",
+      "scope": "Provide a clickable employee profile covering personal information, résumé, work experience, PAN/Aadhaar documents and nominee details. Joining date, role, reporting manager, bank details and UAN were also demonstrated as candidate master fields; confirm the exact field list and access rules.",
+      "acceptance": [
+        "The employee profile can contain the agreed personnel fields and documents.",
+        "Sensitive documents are limited to the authorized roles rather than inheriting broad team-chart visibility."
+      ],
+      "dependencies": [
+        "Personnel-data field list",
+        "Sensitive-document access policy",
+        "Approved employee data model"
+      ],
+      "questions": [
+        "Who can see or edit each field/document, and what retention requirements apply?",
+        "Which fields are required, who maintains them and who may see them?"
+      ],
+      "intervals": [
+        "00:21:10-00:31:00",
+        "00:25:10-00:26:40",
+        "00:06:40-00:11:40"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "60e12e5fe59b5db212db1d7c7eac7555d69c0d69aecfdf05030cc38af841095d"
+    },
+    {
+      "id": "R135-018",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Proposal to confirm",
+      "title": "Confirm historical Zoho payroll migration",
+      "scope": "Confirm what existing Zoho payroll and employee history should be imported into the HR module. Historical imports were discussed as possible, without a settled date range, field mapping or reconciliation plan.",
+      "acceptance": [],
+      "dependencies": [
+        "Source export availability"
+      ],
+      "questions": [
+        "Which history range and modules are approved for the first release?"
+      ],
+      "intervals": [
+        "00:06:40-00:11:40"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "864dc3accb54a720d7f3f8ce7779e5f33b56a9d20f46c594e4325474694f91e2"
+    },
+    {
+      "id": "R135-019",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Proposal to confirm",
+      "title": "Payroll summaries and bank export",
+      "scope": "Review salary/deduction/net-payable/employer-cost summaries and an optional bank-compatible Excel export if the organization needs that payment workflow.",
+      "acceptance": [],
+      "dependencies": [
+        "Bank/payment process decision"
+      ],
+      "questions": [
+        "Is a bank export required, and what exact format? No direct payment API is agreed."
+      ],
+      "intervals": [
+        "00:06:40-00:11:40"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "996c62dff45efe6e22c2be6abd3ffe5bf7809173d704daf482fb9a8e2035d67c"
+    },
+    {
+      "id": "R135-020",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Follow-up",
+      "title": "Payroll calculation trial runs",
+      "scope": "Validate payroll calculations across multiple trial runs before operational use.",
+      "acceptance": [
+        "An agreed set of payroll cases is reconciled with approved expected calculations before use."
+      ],
+      "dependencies": [
+        "Expected payroll examples"
+      ],
+      "questions": [
+        "What test cases and sign-off owner establish acceptance?"
+      ],
+      "intervals": [
+        "00:06:40-00:11:40"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "eb4ecef67a94277fe9095daa9c81a677472a608ee2a69ade684dc421fb257efc"
+    },
+    {
+      "id": "R135-021",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Proposal to confirm",
+      "title": "Compliance dues calendar",
+      "scope": "Review whether to track payroll-related deductions, contributions and compliance due dates in a calendar using organization-approved accounting inputs.",
+      "acceptance": [],
+      "dependencies": [
+        "Accounting/compliance owner input"
+      ],
+      "questions": [
+        "Which obligations, dates and reminders are in scope? No legal rates or deadlines are established by the transcript."
+      ],
+      "intervals": [
+        "00:06:40-00:11:40"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "5c85f4bd7bed8b1776bf59d8627122ac49f0de15dca74c8f319b19c8b8816c7c"
+    },
+    {
+      "id": "R135-022",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Proposal to confirm",
+      "title": "Attendance source indicator",
+      "scope": "Review displaying whether attendance was recorded on mobile or laptop, following the demonstrated source indicator.",
+      "acceptance": [],
+      "dependencies": [
+        "Captured device/source metadata"
+      ],
+      "questions": [
+        "Must the display also distinguish office and external networks?"
+      ],
+      "intervals": [
+        "00:16:20-00:21:20"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "ab94ac320f4c3f2958a2ea699272739f9d21546e66eaf1e987aa50d9a1f53264"
+    },
+    {
+      "id": "R135-023",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Proposal to confirm",
+      "title": "Office network restrictions and field-work exceptions",
+      "scope": "Confirm whether attendance should be restricted to the office network for some users while allowing agreed outside-office workflows.",
+      "acceptance": [],
+      "dependencies": [
+        "Attendance location policy"
+      ],
+      "questions": [
+        "Which roles are office-only, what exceptions apply, and how are field staff handled?"
+      ],
+      "intervals": [
+        "00:11:30-00:21:20"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "6a54273b0fa49442038a8115ace1dab0cf0b8c0d6b747a4ef507e9e22d21a190"
+    },
+    {
+      "id": "R135-024",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Needs clarification",
+      "title": "Joining and exit processes",
+      "scope": "Clarify HR coverage for joining, leaving, onboarding and exit interviews.",
+      "acceptance": [],
+      "dependencies": [],
+      "questions": [
+        "Which records, steps and approvals are required?"
+      ],
+      "intervals": [
+        "00:11:30-00:16:30"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "07c5741ad5430edd398122410217736d33037d7a794c2cf47d072de90c925007"
+    },
+    {
+      "id": "R135-025",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Needs clarification",
+      "title": "Signed office-asset handover records",
+      "scope": "Clarify retention of signed laptop/office-asset handover forms with employee records.",
+      "acceptance": [],
+      "dependencies": [
+        "Existing handover form"
+      ],
+      "questions": [
+        "Is document retention enough, or is a wider asset workflow required?"
+      ],
+      "intervals": [
+        "00:25:10-00:26:40",
+        "00:26:00-00:31:00"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "fcc0457aabfd3ea0d877d0e34ff2a6c189d4c929413d02ada7fce5e6f444c338"
+    },
+    {
+      "id": "R135-026",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Needs clarification",
+      "title": "Daily hours and absence thresholds",
+      "scope": "Confirm daily required hours, lunch treatment and the thresholds for half-day or absence before encoding attendance rules.",
+      "acceptance": [],
+      "dependencies": [
+        "Written attendance policy"
+      ],
+      "questions": [
+        "Does the stated eight-and-a-half-hour period include lunch, and what thresholds or grace periods apply?"
+      ],
+      "intervals": [
+        "00:26:00-00:31:00"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "5fe791a3333f2f635fcdc6c639bd8dad3edf87118ba45d0c991ae3189ac7078e"
+    },
+    {
+      "id": "R135-027",
+      "revision": 1,
+      "module": "HR and payroll",
+      "kind": "Follow-up",
+      "title": "Share attendance screenshot",
+      "scope": "Share the requested screenshot of the demonstrated attendance view.",
+      "acceptance": [],
+      "dependencies": [
+        "Screenshot owner"
+      ],
+      "questions": [
+        "Who will provide it, and has it been received?"
+      ],
+      "intervals": [
+        "00:16:20-00:21:20"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "9c81257c15b6390e48ef337a55b7402b9c3e9828ad02525f9de4c7fdcd7fb5df"
+    },
+    {
+      "id": "R135-028",
+      "revision": 1,
+      "module": "Tasks and transaction workflows",
+      "kind": "Requirement",
+      "title": "Verify actual transaction reflection before final completion",
+      "scope": "Keep a manual check that a purchase/redemption has reflected in investment/InvestWell data before treating the overall transaction task as finally complete.",
+      "acceptance": [
+        "The workflow distinguishes a submitted transaction from a transaction checked as reflected.",
+        "Final completion respects the agreed reflection-verification step."
+      ],
+      "dependencies": [
+        "Available transaction/holding data",
+        "Verification responsibility"
+      ],
+      "questions": [
+        "What evidence is sufficient and who may verify it? Is verification by a different person required?",
+        "Resolve this together with R135-044: should validated NSE status supplement or replace the InvestWell-reflection check?"
+      ],
+      "intervals": [
+        "00:30:50-00:40:40"
+      ],
+      "trackerRefs": [
+        {
+          "id": "0b7f6592c8",
+          "title": "All financial transactions = Critical + mandatory checking step"
+        }
+      ],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "72992300502c50fe765e8442f690d06540b303ec19adac8db044f28633891060"
+    },
+    {
+      "id": "R135-029",
+      "revision": 1,
+      "module": "Tasks and transaction workflows",
+      "kind": "Requirement",
+      "title": "Separate execution, communication and verification stages",
+      "scope": "Keep purchase execution, client information, initial acceptance checking and later investment-reflection checking distinct in the workflow.",
+      "acceptance": [
+        "The workflow shows the agreed distinct work/check stages.",
+        "Client acceptance does not automatically stand in for later investment-reflection verification."
+      ],
+      "dependencies": [
+        "Confirmed stage names and trigger rules"
+      ],
+      "questions": [
+        "How many UI subtasks are intended, and which event completes each one?"
+      ],
+      "intervals": [
+        "00:35:40-00:45:30"
+      ],
+      "trackerRefs": [
+        {
+          "id": "62090e3a55",
+          "title": "Post task flow for OPS"
+        },
+        {
+          "id": "0b7f6592c8",
+          "title": "All financial transactions = Critical + mandatory checking step"
+        }
+      ],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "bd1b19440bdbd0d3d5c799463c5cb929dd2b0d42cf362bb39c65de6e4cbeb7cd"
+    },
+    {
+      "id": "R135-030",
+      "revision": 1,
+      "module": "Tasks and transaction workflows",
+      "kind": "Reported issue",
+      "title": "Missing purchase workflow subtasks",
+      "scope": "Investigate the reported missing purchase subtask(s) that prevent expected task progression/completion.",
+      "acceptance": [
+        "A reported affected task/template can be reproduced and its expected purchase steps are present.",
+        "The task can progress through the agreed checks without bypassing verification."
+      ],
+      "dependencies": [
+        "Affected task/template example"
+      ],
+      "questions": [
+        "Which task IDs/templates and exact missing steps demonstrate the issue?"
+      ],
+      "intervals": [
+        "00:40:30-00:45:30"
+      ],
+      "trackerRefs": [
+        {
+          "id": "62090e3a55",
+          "title": "Post task flow for OPS"
+        }
+      ],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "de0a58657fc9f7820e5923dde2b6e7741d6070e600189abf73d00a55191e4c46"
+    },
+    {
+      "id": "R135-031",
+      "revision": 1,
+      "module": "Tasks and transaction workflows",
+      "kind": "Requirement",
+      "title": "Configurable step timing and final checks",
+      "scope": "Give follow-on steps their own scheduled dates/day offsets rather than making every stage actionable on the first day. Authorized administrators should be able to update template timing rules. The discussion also asks for back-office checking and RM final verification; confirm these responsibilities separately from timing.",
+      "acceptance": [
+        "Each step uses its agreed scheduled date or offset.",
+        "Future steps do not become today's work merely because the parent was created today.",
+        "An authorized template editor can change stage offsets and verify when steps activate.",
+        "The agreed purchase/redemption workflow includes back-office checking and RM final-verification responsibilities, separately from when each stage activates."
+      ],
+      "dependencies": [
+        "Per-template timing rules",
+        "Offset anchor and business-day/calendar-day policy",
+        "Confirmed per-template stages, offset rules and authorized template editors."
+      ],
+      "questions": [
+        "Which steps use +1, +2 or +3, from which event, and are holidays/weekends excluded?",
+        "Numbers in the demonstration are examples, not universal settlement rules. Do not infer a current regulatory deadline.",
+        "Which check belongs to back office and which final check to the RM? Must different people perform them?"
+      ],
+      "intervals": [
+        "00:40:30-00:50:20",
+        "00:55:00-01:00:00"
+      ],
+      "trackerRefs": [
+        {
+          "id": "62090e3a55",
+          "title": "Post task flow for OPS"
+        },
+        {
+          "id": "62c2b0a166",
+          "title": "Subtask"
+        },
+        {
+          "id": "1a0d277085",
+          "title": "Existing tracker row (title not provided)"
+        },
+        {
+          "id": "0435d4e498",
+          "title": "Existing tracker row (title not provided)"
+        },
+        {
+          "id": "a6502d1c0f",
+          "title": "Switch ,SIP ,Redemption Task Flow shared"
+        }
+      ],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "c10626f19a55c463fa1ea6887df5e153ca7b61c07f09510dd39dd94d1da55460"
+    },
+    {
+      "id": "R135-032",
+      "revision": 1,
+      "module": "Tasks and transaction workflows",
+      "kind": "Requirement",
+      "title": "Future steps remain inactive until scheduled",
+      "scope": "Future subtasks, including purchase verification, should remain inactive until the scheduled date. A later demonstrated result was accepted as correct; the full workflow has not been independently verified.",
+      "acceptance": [
+        "A future step cannot be treated as actionable before the agreed date unless an explicitly approved early-opening rule applies.",
+        "Scheduled-date handling is tested alongside prior-step dependencies."
+      ],
+      "dependencies": [
+        "Agreed activation rule",
+        "Task clock/timezone and scheduling",
+        "Exact demonstrated scenario"
+      ],
+      "questions": [
+        "Must both the previous group and scheduled date be satisfied? Can an owner/admin intentionally open a later group early?",
+        "Which case was accepted, and do the earlier reported cases reproduce separately?"
+      ],
+      "intervals": [
+        "00:45:20-00:55:10",
+        "00:51:30-00:53:00"
+      ],
+      "trackerRefs": [
+        {
+          "id": "54e5c037c3",
+          "title": "Subtask"
+        },
+        {
+          "id": "62090e3a55",
+          "title": "Post task flow for OPS"
+        }
+      ],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "409772587e4c77a42d4cdab0fdd9eeac1582e5fba3b21e98cba6d3add545c281"
+    },
+    {
+      "id": "R135-033",
+      "revision": 1,
+      "module": "Tasks and transaction workflows",
+      "kind": "Requirement",
+      "title": "Today view excludes future follow-on work",
+      "scope": "Today's view should show today's relevant task work and not inflate today's or overdue counts with future follow-on steps.",
+      "acceptance": [
+        "Future follow-ons are excluded from Today until their agreed date.",
+        "Today, future and overdue counts remain consistent with each step's schedule."
+      ],
+      "dependencies": [
+        "Date-bucket definitions",
+        "Activation rule"
+      ],
+      "questions": [
+        "Where should inactive future steps remain visible: parent detail, All, Future or a combination?"
+      ],
+      "intervals": [
+        "00:40:30-00:50:20"
+      ],
+      "trackerRefs": [
+        {
+          "id": "54e5c037c3",
+          "title": "Subtask"
+        },
+        {
+          "id": "86e5a14a37",
+          "title": "Subtask"
+        }
+      ],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "a3cd48ff435fc7992c2d4d8af9f718785fefe85fe34b62be7bb1e13a1c922196"
+    },
+    {
+      "id": "R135-034",
+      "revision": 1,
+      "module": "Tasks and transaction workflows",
+      "kind": "Reported issue",
+      "title": "Back returns to the previous page",
+      "scope": "Investigate and correct navigation that sends users Home instead of back to their preceding page/context.",
+      "acceptance": [
+        "Back from the identified affected view returns to its actual previous context."
+      ],
+      "dependencies": [
+        "Affected navigation path"
+      ],
+      "questions": [
+        "Which route and filter/scroll state must be preserved?"
+      ],
+      "intervals": [
+        "00:35:40-00:40:40"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "921b85706603cfa30ac780dea6852fcc12385b39560754110c83ff9026df8cbe"
+    },
+    {
+      "id": "R135-035",
+      "revision": 1,
+      "module": "Tasks and transaction workflows",
+      "kind": "Decision discussed",
+      "title": "Review legacy backlog before closing records",
+      "scope": "Review historical incorrectly opened/overdue tasks jointly and close only records checked against the underlying work and transactions. Bring each reviewed item to a logical conclusion; this does not authorize blanket deletion or completion.",
+      "acceptance": [
+        "The cleanup plan identifies exact records and review criteria before mutation.",
+        "Unchecked transactions are not blanket-closed.",
+        "Produce a reviewed reconciliation proposal with evidence for each outcome before any data mutation."
+      ],
+      "dependencies": [
+        "Agreed record list",
+        "Business reviewer availability",
+        "Business reviewer",
+        "Exact scope"
+      ],
+      "questions": [
+        "Who will review, when, and which records are in scope?",
+        "Who will attend, when and which records will be reviewed?",
+        "No bulk deletion, automatic completion or deadline was authorized by this passage."
+      ],
+      "intervals": [
+        "00:45:20-00:50:20",
+        "00:55:00-01:00:00"
+      ],
+      "trackerRefs": [
+        {
+          "id": "fe14558c4b",
+          "title": "Subtask"
+        }
+      ],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "7a78d250b59c8333157d4549150ef22ca080f6eeb11b5640384b7c5280216e43"
+    },
+    {
+      "id": "R135-036",
+      "revision": 1,
+      "module": "Tasks and transaction workflows",
+      "kind": "Reported issue",
+      "title": "Follow-up-call issue reportedly persists",
+      "scope": "Obtain a concrete example of the follow-up-call/contact task problem reported as remaining after a claimed fix.",
+      "acceptance": [
+        "An example identifies the trigger, actual behavior and expected behavior before a fix is scoped."
+      ],
+      "dependencies": [
+        "Affected task example"
+      ],
+      "questions": [
+        "Which follow-up task is unwanted or incorrect?"
+      ],
+      "intervals": [
+        "00:30:50-00:35:50"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "d810eb99cb478d82b2be01d59998780a806c702450cda2502c363b15d58fbbfe"
+    },
+    {
+      "id": "R135-037",
+      "revision": 1,
+      "module": "Tasks and transaction workflows",
+      "kind": "Reported issue",
+      "title": "Purchase opened from reinvestment lacks editable details",
+      "scope": "The purchase reached from the redemption-and-reinvestment shortcut opens with scheme/purchase details blank, and the user cannot fully edit them.",
+      "acceptance": [
+        "Reproduce the exact shortcut and preserve or collect the required purchase fields before proceeding."
+      ],
+      "dependencies": [
+        "Exact reinvestment-to-purchase shortcut reproduction."
+      ],
+      "questions": [
+        "The source names a specific observed flow, not proof that every purchase path fails."
+      ],
+      "intervals": [
+        "00:55:00-01:00:00"
+      ],
+      "trackerRefs": [
+        {
+          "id": "de2a27a9e0",
+          "title": "Redemption and Reinvest Task Template"
+        },
+        {
+          "id": "bc97a3aa30",
+          "title": "Existing tracker row (title not provided)"
+        },
+        {
+          "id": "1c00ac78cd",
+          "title": "Existing tracker row (title not provided)"
+        }
+      ],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "4c86b3fb80fdc7c54297c94164c52e4e04b1b6d4c12182f051a7aec8e3305d0b"
+    },
+    {
+      "id": "R135-038",
+      "revision": 1,
+      "module": "Tasks and transaction workflows",
+      "kind": "Requirement",
+      "title": "Allow a new folio choice for purchases",
+      "scope": "Offer a New folio option where the purchase does not use an existing folio; the discussion explicitly excludes redemption.",
+      "acceptance": [
+        "Purchase supports the intended New folio path; redemption continues to select an existing holding."
+      ],
+      "dependencies": [],
+      "questions": [
+        "Whether New is a selectable sentinel or manually entered label needs UI confirmation."
+      ],
+      "intervals": [
+        "00:55:00-01:00:00"
+      ],
+      "trackerRefs": [
+        {
+          "id": "a9011010da",
+          "title": "Existing tracker row (title not provided)"
+        },
+        {
+          "id": "d0caed6eca",
+          "title": "Purchase task list"
+        }
+      ],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "bff9149534d34bd9a1dd0bdb2533887492a8bcd6ec5ba76d6b4d08e037ef67f8"
+    },
+    {
+      "id": "R135-039",
+      "revision": 1,
+      "module": "Tasks and transaction workflows",
+      "kind": "Needs clarification",
+      "title": "Clarify future-deadline and stage visibility",
+      "scope": "A task created now with a future deadline is expected or questioned in Today; the group inspects created/received/deadline and subsequent T+n steps.",
+      "acceptance": [
+        "Clarify which date controls parent and subtask visibility, with an example covering future deadline and earlier activation."
+      ],
+      "dependencies": [],
+      "questions": [
+        "Fragmented screen-share discussion does not settle a new Today filter rule. September 14 is an example task date, not a delivery deadline."
+      ],
+      "intervals": [
+        "00:55:00-01:00:00",
+        "00:59:50-01:04:50"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "dcf8d60fcdabaca3c35b2c707e8d6fcb05ada7d57cdfc5ffb75e693562a60c43"
+    },
+    {
+      "id": "R135-040",
+      "revision": 1,
+      "module": "Tasks and transaction workflows",
+      "kind": "Decision discussed",
+      "title": "Full task edit flow with add/remove investment lines",
+      "scope": "Replicate the task-creation selection flow in Edit Details across applicable tasks, allowing additions/removals and changes such as investment scheme or amount; submit changes for approval rather than deleting and recreating the task.",
+      "acceptance": [
+        "Review and approve additions/removals/amount changes through a task revision without losing the original record."
+      ],
+      "dependencies": [
+        "Resolution of the approver routing question in R135-042."
+      ],
+      "questions": [
+        "Exact applicability by template and treatment of already processed financial instructions require definition."
+      ],
+      "intervals": [
+        "00:59:50-01:04:50",
+        "01:04:40-01:09:40"
+      ],
+      "trackerRefs": [
+        {
+          "id": "652e8ca06a",
+          "title": "Amount-in-words auto-fill + task edit history"
+        },
+        {
+          "id": "6e1589a225",
+          "title": "Existing tracker row (title not provided)"
+        }
+      ],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "b8d559af3ebd98fb9f60e9d409948223b199d9d06747178fabd32de4fa04bbd4"
+    },
+    {
+      "id": "R135-041",
+      "revision": 1,
+      "module": "Tasks and transaction workflows",
+      "kind": "Requirement",
+      "title": "Require a reason and preserve edit history",
+      "scope": "Task edits, and any allowed removal, require an explanatory comment; retain the change and reason in history.",
+      "acceptance": [
+        "Blank reasons are rejected and before/after changes with reason and actor remain visible."
+      ],
+      "dependencies": [],
+      "questions": [
+        "Do not interpret the deletion discussion as permission to permanently erase audit history."
+      ],
+      "intervals": [
+        "00:59:50-01:04:50",
+        "01:04:40-01:09:40"
+      ],
+      "trackerRefs": [
+        {
+          "id": "652e8ca06a",
+          "title": "Amount-in-words auto-fill + task edit history"
+        }
+      ],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "796cb2522d1b0c445e9950e033b056edbe5e0b8cee1d512f8e7fb2d53eb2d665"
+    },
+    {
+      "id": "R135-042",
+      "revision": 1,
+      "module": "Tasks and transaction workflows",
+      "kind": "Needs clarification",
+      "title": "Resolve original-creator versus senior approval",
+      "scope": "Editing is described first as requiring the person who raised the task to understand/approve the change, and later as requiring a senior/higher person rather than self-edit/delete.",
+      "acceptance": [
+        "Confirm an approver matrix for task edits, activity corrections and deletion requests before implementation."
+      ],
+      "dependencies": [],
+      "questions": [
+        "Do not silently choose original creator, direct manager or administrator as equivalent."
+      ],
+      "intervals": [
+        "00:59:50-01:04:50",
+        "01:04:40-01:09:40",
+        "01:09:30-01:14:30",
+        "01:14:20-01:19:20"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "8c64664450cc86ef90acbb602d7e64447b8ffd5a7fa175a80ce4e07237239b6a"
+    },
+    {
+      "id": "R135-043",
+      "revision": 1,
+      "module": "Tasks and transaction workflows",
+      "kind": "Requirement",
+      "title": "Structured handover with three meaningful answers",
+      "scope": "Forwarding should require what was done today, what will be done next, and the reason for forwarding; generic 'do tomorrow/no time today' is described as insufficient for a replacement colleague.",
+      "acceptance": [
+        "A receiving colleague sees all three handover answers with the forwarded task."
+      ],
+      "dependencies": [],
+      "questions": [
+        "How to enforce useful content beyond non-empty fields is not specified."
+      ],
+      "intervals": [
+        "01:04:40-01:09:40"
+      ],
+      "trackerRefs": [
+        {
+          "id": "8638ab4250",
+          "title": "Task Forwarding"
+        },
+        {
+          "id": "15b011030d",
+          "title": "Existing tracker row (title not provided)"
+        }
+      ],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "aa130f426f169307c27d213713abc3b7f7a624fa875c93d7786c4664c7564f1b"
+    },
+    {
+      "id": "R135-044",
+      "revision": 1,
+      "module": "Tasks and transaction workflows",
+      "kind": "Proposal to confirm",
+      "title": "Link external order IDs to tasks and reconcile NSE status",
+      "scope": "Store the NSE order ID on the task and sync it so confirmed purchase status can support task closure without relying solely on waiting for InvestWell reflection.",
+      "acceptance": [
+        "Define authoritative status mapping, finality and permitted closure behavior before changing task-completion checks."
+      ],
+      "dependencies": [
+        "NSE order ID/status availability and agreed task closure policy."
+      ],
+      "questions": [
+        "The quoted near-certain reflection rate is not a guarantee. Do not remove existing verification gates solely from this proposal.",
+        "Confirm whether authoritative NSE status would supplement or replace the earlier InvestWell-reflection check, and retain separate customer acceptance and final verification semantics."
+      ],
+      "intervals": [
+        "01:24:00-01:29:00"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "cb39cf00acf6751a24da2428dcd437ed36db83d4e521349e8ce8e6ddf179396c"
+    },
+    {
+      "id": "R135-045",
+      "revision": 1,
+      "module": "Activities and investor timeline",
+      "kind": "Requirement",
+      "title": "Recognize work before the parent task finishes",
+      "scope": "Reflect work performed on a task/stage today even when the overall transaction completes on a later day. Proposed approach: record meaningful stage transitions and their work time in Activities, without duplicating tasks or marking the parent complete early.",
+      "acceptance": [
+        "Today's work can be recognized without falsely marking the entire transaction complete."
+      ],
+      "dependencies": [
+        "Agreed activity/counting model"
+      ],
+      "questions": [
+        "Should a stage transition count as a work unit, and how should time spent be recorded?",
+        "What counts as an action, how is time captured, and which reports use it? This does not replace scheduled-step behavior."
+      ],
+      "intervals": [
+        "00:40:30-00:45:30"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "28f885df802536df8cd4eed824b3a663c6c3c41d7c5acf292830803bba93cf58"
+    },
+    {
+      "id": "R135-046",
+      "revision": 1,
+      "module": "Activities and investor timeline",
+      "kind": "Proposal to confirm",
+      "title": "Presets for repetitive activity descriptions",
+      "scope": "RMs request dropdown/preset content to reduce time entering many call logs; the group challenges whether this saves meaningful time and emphasizes informative logging.",
+      "acceptance": [
+        "Clarify permitted presets and required specific client context before treating this as approved scope."
+      ],
+      "dependencies": [],
+      "questions": [
+        "No final preset list or unambiguous acceptance is recorded."
+      ],
+      "intervals": [
+        "01:04:40-01:09:40",
+        "01:09:30-01:14:30"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "b35e48ca50c1fb6019f1364b5887ea78240d74104b5462b4b23a1a793752ece2"
+    },
+    {
+      "id": "R135-047",
+      "revision": 1,
+      "module": "Activities and investor timeline",
+      "kind": "Requirement",
+      "title": "Log a bulk message against selected clients",
+      "scope": "Add a distinct bulk-message activity with selected recipients and one shared description/content; show the message in each affected client's activity history and retain recipient counts.",
+      "acceptance": [
+        "One submitted bulk activity appears against every selected client with the correct message and recipients."
+      ],
+      "dependencies": [],
+      "questions": [
+        "This concerns recording a sent communication; do not assume this alone authorizes dispatching WhatsApp campaigns."
+      ],
+      "intervals": [
+        "01:04:40-01:09:40"
+      ],
+      "trackerRefs": [
+        {
+          "id": "4fb9f8027a",
+          "title": "Existing tracker row (title not provided)"
+        },
+        {
+          "id": "98f87c3e77",
+          "title": "Registered activities not reflecting under Activity Tab"
+        }
+      ],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "b73c091921f1c586dddd9eb11ee5f9e47636dea338f0db84bf4ced73bd652ad5"
+    },
+    {
+      "id": "R135-048",
+      "revision": 1,
+      "module": "Activities and investor timeline",
+      "kind": "Decision discussed",
+      "title": "Count bulk-message work once",
+      "scope": "Time credit for a bulk message must reflect the actual bulk action, not multiply the single-message allowance by all recipients.",
+      "acceptance": [
+        "A 200-recipient example does not become 200 minutes of work; batch-level time and recipient count remain distinct."
+      ],
+      "dependencies": [],
+      "questions": [
+        "One/two minutes are examples; exact default versus measured duration is unresolved."
+      ],
+      "intervals": [
+        "01:04:40-01:09:40"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "41d194bdfa1223b1460b384156160e074292c384f312fa892a630d5b771e2273"
+    },
+    {
+      "id": "R135-049",
+      "revision": 1,
+      "module": "Activities and investor timeline",
+      "kind": "Requirement",
+      "title": "Require a meaningful description before submission",
+      "scope": "The activity description should be mandatory; keep entry manual for now.",
+      "acceptance": [
+        "The activity cannot be successfully saved with an empty description."
+      ],
+      "dependencies": [],
+      "questions": [
+        "'Before exit' should be clarified as submit validation, not trapping navigation or discarding a draft."
+      ],
+      "intervals": [
+        "01:09:30-01:14:30"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "f8e60c235b2eca83b01bfb8c6fa7eb9d3baf2c170652447c7364248fd635d309"
+    },
+    {
+      "id": "R135-050",
+      "revision": 1,
+      "module": "Activities and investor timeline",
+      "kind": "Needs clarification",
+      "title": "Settle mandatory duration and anti-gaming rules",
+      "scope": "The group asks whether call duration must be compulsory because it drives work-time reporting, notes manual-entry loopholes, and asks for further thought.",
+      "acceptance": [
+        "Confirm duration source, requiredness and correction rules before adding a scoring constraint."
+      ],
+      "dependencies": [],
+      "questions": [
+        "No finalized automatic timer or compulsory-duration rule is established here."
+      ],
+      "intervals": [
+        "01:09:30-01:14:30"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "0579f47b7e79cc30ff6e4f61a6743b7611132d0ed392055b20b430121f362d64"
+    },
+    {
+      "id": "R135-051",
+      "revision": 1,
+      "module": "Activities and investor timeline",
+      "kind": "Requirement",
+      "title": "Senior-controlled activity edits and deletion",
+      "scope": "Corrections such as changing a call description should be requested with a reason and handled by a senior/higher authorized person, not silently edited/deleted by the original user.",
+      "acceptance": [
+        "A correction request preserves original activity and reason and reaches the designated approver."
+      ],
+      "dependencies": [
+        "Resolution of the approver routing question in R135-042."
+      ],
+      "questions": [
+        "Approval identity and whether this applies to all records or only activity corrections require resolution alongside the task rule."
+      ],
+      "intervals": [
+        "01:09:30-01:14:30",
+        "01:14:20-01:19:20"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "af474e6056bb4d3fb5655cada34bf0cd6657650d592692975e56e21e0c4c5e56"
+    },
+    {
+      "id": "R135-052",
+      "revision": 1,
+      "module": "Activities and investor timeline",
+      "kind": "Requirement",
+      "title": "Use full meeting details when logging a meeting",
+      "scope": "Replicate the relevant meeting-module fields in activity logging, including online/offline/location and meeting details rather than a reduced inconsistent form.",
+      "acceptance": [
+        "Logging a meeting from the investor/activity context captures the agreed meeting fields consistently."
+      ],
+      "dependencies": [
+        "The existing meeting-module field inventory."
+      ],
+      "questions": [
+        "Exact field inventory must be reconciled with the meeting module; do not invent extra required fields."
+      ],
+      "intervals": [
+        "01:14:20-01:19:20"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "72c9ccd3399ddcd763b9195e24ec91a96254e2dca0f8d482b89c8e7dd3073f3e"
+    },
+    {
+      "id": "R135-053",
+      "revision": 1,
+      "module": "Activities and investor timeline",
+      "kind": "Requirement",
+      "title": "Log an activity from the investor with details prefilled",
+      "scope": "Provide the activity-log action inside the investor record so that the investor context/details are carried through without retyping, similar to Create Task.",
+      "acceptance": [
+        "The selected investor is prefilled and the saved activity is linked to the same investor."
+      ],
+      "dependencies": [],
+      "questions": [
+        "The passage discusses an existing button and a possible placement change; verify what is already available before redesigning."
+      ],
+      "intervals": [
+        "01:14:20-01:19:20"
+      ],
+      "trackerRefs": [
+        {
+          "id": "4fb9f8027a",
+          "title": "Existing tracker row (title not provided)"
+        },
+        {
+          "id": "98f87c3e77",
+          "title": "Registered activities not reflecting under Activity Tab"
+        }
+      ],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "9ccdfe1103bfe8a4907e4ad6890b8dec6805b8310905b14819befdc41aca20e6"
+    },
+    {
+      "id": "R135-054",
+      "revision": 1,
+      "module": "Activities and investor timeline",
+      "kind": "Decision discussed",
+      "title": "Use a chronological Timeline view",
+      "scope": "Rename or present the investor's existing activity history as Timeline, showing when client actions and tasks were added.",
+      "acceptance": [
+        "The agreed investor history surface is clearly labeled and chronological."
+      ],
+      "dependencies": [],
+      "questions": [
+        "Do not merge unrelated task/transaction logs or duplicate them merely because the word timeline was used."
+      ],
+      "intervals": [
+        "01:14:20-01:19:20"
+      ],
+      "trackerRefs": [
+        {
+          "id": "320cedd4f3",
+          "title": "Existing tracker row (title not provided)"
+        }
+      ],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "8194394abe56852b36471316ca1591d6205c85ce25c2b09a3038ef7f1be833b6"
+    },
+    {
+      "id": "R135-055",
+      "revision": 1,
+      "module": "Data imports and reporting",
+      "kind": "Reported issue",
+      "title": "Failing report imports",
+      "scope": "Investigate reported failures affecting some CAMS/Karvy DBF/CSV and SIP/pending report imports.",
+      "acceptance": [
+        "The specific failing jobs/reports and errors are identified.",
+        "Any agreed change is verified against the relevant reports without losing required data."
+      ],
+      "dependencies": [
+        "Read-only job evidence",
+        "Report mapping"
+      ],
+      "questions": [
+        "Which seven reports/jobs were being discussed, and which currently fail?"
+      ],
+      "intervals": [
+        "00:30:50-00:40:40"
+      ],
+      "trackerRefs": [
+        {
+          "id": "24520e904d",
+          "title": "Data Syncing"
+        }
+      ],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "d67a3e0f23d0e032035e4e1cafb2cf7144dd580a2960dfc81c6ab285358769d5"
+    },
+    {
+      "id": "R135-056",
+      "revision": 1,
+      "module": "Data imports and reporting",
+      "kind": "Needs clarification",
+      "title": "Verify claimed missing InvestWell access",
+      "scope": "Resolve the disagreement between a missing-report-access explanation and the statement that the relevant integrations already have equivalent access.",
+      "acceptance": [
+        "Actual report availability is checked before attributing failure to permissions."
+      ],
+      "dependencies": [
+        "Authorized report access check",
+        "Authorized access"
+      ],
+      "questions": [
+        "Which report screens/downloads fail with the intended account?",
+        "Who owns the check and where will the result be recorded?"
+      ],
+      "intervals": [
+        "00:35:40-00:40:40"
+      ],
+      "trackerRefs": [
+        {
+          "id": "24520e904d",
+          "title": "Data Syncing"
+        }
+      ],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "941c1315477bd6a90eeff8ef4e17d3c321ba28f0e443a5450f200d873470a19f"
+    },
+    {
+      "id": "R135-057",
+      "revision": 1,
+      "module": "Data imports and reporting",
+      "kind": "Proposal to confirm",
+      "title": "Prefer processed InvestWell report data",
+      "scope": "Evaluate using InvestWell-processed downloadable reports rather than directly consuming raw CAMS/Karvy files.",
+      "acceptance": [],
+      "dependencies": [
+        "Data coverage comparison",
+        "Report access and job diagnostics"
+      ],
+      "questions": [
+        "Would every required field/report remain covered? Do not disable current feeds without an approved migration plan."
+      ],
+      "intervals": [
+        "00:30:50-00:40:40"
+      ],
+      "trackerRefs": [
+        {
+          "id": "24520e904d",
+          "title": "Data Syncing"
+        }
+      ],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "da3b56c012a0167b3057e6846783ceba6dbba8d84a61ec68c7f02b03e7215d53"
+    },
+    {
+      "id": "R135-058",
+      "revision": 1,
+      "module": "Data imports and reporting",
+      "kind": "Needs clarification",
+      "title": "Retain the NAV-use-case disagreement",
+      "scope": "Storage-heavy NAV data is questioned for removal; another speaker explains rolling returns and future fund/opportunity intelligence require NAVs, after which the discussion moves on.",
+      "acceptance": [
+        "Identify data consumers and retention needs before proposing any removal."
+      ],
+      "dependencies": [],
+      "questions": [
+        "No NAV deletion is agreed. 'NAV' is inferred from the explicit rolling-return discussion around garbled 'any data'."
+      ],
+      "intervals": [
+        "01:28:50-01:33:50"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "327ececd08a99c1fbd157e12b9bcc39b3a09165d020bc77a91377de5e163e7a7"
+    },
+    {
+      "id": "R135-059",
+      "revision": 1,
+      "module": "Team communication and WhatsApp",
+      "kind": "Proposal to confirm",
+      "title": "Try existing team communication",
+      "scope": "Try the demonstrated existing team chat/attachments and collect concrete gaps before deciding whether further integration is needed.",
+      "acceptance": [],
+      "dependencies": [
+        "User feedback"
+      ],
+      "questions": [
+        "What capability is actually missing? No distinct additional communication build was agreed in this half."
+      ],
+      "intervals": [
+        "00:26:00-00:35:50"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "86aa43c748ebdb879d7e4b4e0526a63d74c2598867a78bba8ca8d14451a3ad8f"
+    },
+    {
+      "id": "R135-060",
+      "revision": 1,
+      "module": "Team communication and WhatsApp",
+      "kind": "Follow-up",
+      "title": "Connect the approved business number through Meta prerequisites",
+      "scope": "Proceed with WhatsApp integration using the approved number, API access, system-user token, phone-number ID, WhatsApp business ID and webhook configuration.",
+      "acceptance": [
+        "Confirm authorized account/number ownership and required configuration without exposing credentials."
+      ],
+      "dependencies": [
+        "Authorized Meta account/number and required API configuration."
+      ],
+      "questions": [
+        "No credentials are contained in this extraction, and no owner for providing them is reliably attributable."
+      ],
+      "intervals": [
+        "01:14:20-01:19:20",
+        "01:19:10-01:24:10"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "d1ebb530099c66ffbc9a33eb6947ddbac41896552bc0e4156b3c01e2de0b4a95"
+    },
+    {
+      "id": "R135-061",
+      "revision": 1,
+      "module": "Team communication and WhatsApp",
+      "kind": "Requirement",
+      "title": "Task/onboarding notifications and operations conversations",
+      "scope": "Use WhatsApp for task-related and onboarding communications; the discussion includes operations staff conversing when the customer-service window is open.",
+      "acceptance": [
+        "Define allowed operational triggers and staff conversation workflow, then validate against current provider rules.",
+        "Template classification and delivery behavior must follow provider rules; marketing content must not be relabeled as utility merely to improve delivery."
+      ],
+      "dependencies": [
+        "WhatsApp integration prerequisites and approved operational templates."
+      ],
+      "questions": [
+        "Statements about a 24-hour window and deliverability are source claims, not independently verified policy or guarantees. Initial manual chat scope is somewhat contested."
+      ],
+      "intervals": [
+        "01:19:10-01:24:10"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "5e048af5958fbcc0f59d1ec9dcf21eb599df08427cecc7dcd827df9915a14fd5"
+    },
+    {
+      "id": "R135-062",
+      "revision": 1,
+      "module": "Team communication and WhatsApp",
+      "kind": "Proposal to confirm",
+      "title": "Retry undelivered campaign recipients with a closing point",
+      "scope": "An example campaign retries the remaining recipients on subsequent days and closes after several attempts/days.",
+      "acceptance": [
+        "If approved, specify retry eligibility, opt-outs, stop conditions and visible delivery status."
+      ],
+      "dependencies": [],
+      "questions": [
+        "200/100 recipients and four days are illustrative, not agreed fixed limits. Do not automatically retry all failed marketing messages."
+      ],
+      "intervals": [
+        "01:19:10-01:24:10"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "f3c773de172061c5defcf6a4fa721de2e031b66f63828b5303c4c465e579b979"
+    },
+    {
+      "id": "R135-063",
+      "revision": 1,
+      "module": "Team communication and WhatsApp",
+      "kind": "Follow-up",
+      "title": "Share a WhatsApp dashboard reference",
+      "scope": "A screenshot of the expected WhatsApp dashboard is requested; reusable existing interface functionality is claimed during the demonstration.",
+      "acceptance": [
+        "Obtain the reference and distinguish required screens from a demonstrated example."
+      ],
+      "dependencies": [],
+      "questions": [
+        "No screenshot supplied within these text chunks; existing implementation is not independently verified."
+      ],
+      "intervals": [
+        "01:24:00-01:29:00"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "5b2c0171fe303985d1722bfa1feb122de4f8f67b946e9c22816d5eaa7f30ee61"
+    },
+    {
+      "id": "R135-064",
+      "revision": 1,
+      "module": "Team communication and WhatsApp",
+      "kind": "Requirement",
+      "title": "Combine operational NSE reminders with WhatsApp",
+      "scope": "Send useful reminders for orders awaiting approval near a cutoff, unvalidated UCCs and SIP cancellation links, using the relevant confirmation/validation link.",
+      "acceptance": [
+        "Define triggers, eligible recipients, expiration, consent and deduplication using real provider capabilities."
+      ],
+      "dependencies": [
+        "NSE status/link access and WhatsApp integration."
+      ],
+      "questions": [
+        "Around 3 PM is an example. No universal fixed cutoff or automated message authorization for current customers is inferred."
+      ],
+      "intervals": [
+        "01:24:00-01:29:00",
+        "01:28:50-01:33:50"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "73e18d7a64d03087efb370dd276c16a1eb56a1d644f4a19b8f07e33b0b3766bc"
+    },
+    {
+      "id": "R135-065",
+      "revision": 1,
+      "module": "Financial transactions and navigation",
+      "kind": "Decision discussed",
+      "title": "Start with an NSE aggregator and reporting dashboard",
+      "scope": "Prioritize an NSE reporting/management area that shows UCCs, mandates, SIP/STP/SWP and transactions across a selected period, including orders originating through NSE directly or other routes, not only those placed via InvestWell.",
+      "acceptance": [
+        "Validate which upstream APIs can expose the required cross-channel transaction and account information."
+      ],
+      "dependencies": [
+        "NSE access and verified upstream reporting capabilities."
+      ],
+      "questions": [
+        "Access/API coverage must be explored; the transcript does not prove every desired field is available."
+      ],
+      "intervals": [
+        "01:24:00-01:29:00",
+        "01:28:50-01:33:50"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "8670546a35f48fd52150415296099f11c97fbabd1ceaa42c6cde7b3d8cf952b2"
+    },
+    {
+      "id": "R135-066",
+      "revision": 1,
+      "module": "Financial transactions and navigation",
+      "kind": "Requirement",
+      "title": "Explore early operational actions",
+      "scope": "Early candidates include UCC and mandate creation, SIP/STP rejection/cancellation handling and bulk SIP cancellation before purchase/redemption placement.",
+      "acceptance": [
+        "Build an API capability/safety matrix and obtain sign-off for each supported operational action."
+      ],
+      "dependencies": [
+        "API capability exploration and separate safety approval for each action."
+      ],
+      "questions": [
+        "Some action names are garbled. Cancellation is itself consequential and needs explicit approval/security design; this is not authority to execute it now."
+      ],
+      "intervals": [
+        "01:24:00-01:29:00",
+        "01:28:50-01:33:50"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "5ad49f541c5e3b9eb5d6b65b0758d9114fdb9affa83d4c1cf4d21840ffad204d"
+    },
+    {
+      "id": "R135-067",
+      "revision": 1,
+      "module": "Financial transactions and navigation",
+      "kind": "Deferred decision",
+      "title": "Defer purchase, redemption and switch order placement",
+      "scope": "Do not include financial order placement in the first NSE phase; explore purchase/redemption/switch later after understanding checks and balances and establishing the reporting layer.",
+      "acceptance": [
+        "The first phase cannot place these financial transactions and clearly separates future scope."
+      ],
+      "dependencies": [],
+      "questions": [
+        "This explicit deferral overrides vague surrounding language about doing operations directly from CRM."
+      ],
+      "intervals": [
+        "01:24:00-01:29:00",
+        "01:28:50-01:33:50"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "4b790292408f86a27a5fe8c4a4712ec722e2181c978b119f6702283aa54001f4"
+    },
+    {
+      "id": "R135-068",
+      "revision": 1,
+      "module": "Financial transactions and navigation",
+      "kind": "Decision discussed",
+      "title": "Use Financial Transactions with platform choices",
+      "scope": "Use a Financial Transactions (FT) navigation area with NSE first and a dropdown/platform structure that can later include MFU, rather than proliferating a separate top-level tab for every provider.",
+      "acceptance": [
+        "NSE sits inside the agreed FT structure; future MFU is not presented as already integrated."
+      ],
+      "dependencies": [],
+      "questions": [
+        "MFU agreement/integration is stated as later exploration."
+      ],
+      "intervals": [
+        "01:28:50-01:33:50"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "05124b1e2cc31441e34a9ff2709b3b842259116ad733cf87ef8ca217b45d7f2b"
+    },
+    {
+      "id": "R135-069",
+      "revision": 1,
+      "module": "Financial transactions and navigation",
+      "kind": "Requirement",
+      "title": "Group non-financial work under NFT",
+      "scope": "Use Non-Financial Transactions under/alongside the KYC area to collect future non-financial operations such as change of broker and onboarding-related work.",
+      "acceptance": [
+        "Confirm final label/location and scope before moving existing screens."
+      ],
+      "dependencies": [],
+      "questions": [
+        "Some listed examples are indistinct; this is a grouping direction, not a detailed implementation list."
+      ],
+      "intervals": [
+        "01:28:50-01:33:50"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "d498cbc66f10a01ab4e9147c6a0095bd207b02ccce6d196fe0e0cc36160e9623"
+    },
+    {
+      "id": "R135-070",
+      "revision": 1,
+      "module": "Financial transactions and navigation",
+      "kind": "Needs clarification",
+      "title": "Clarify failed-SIP self-service purchase suggestion",
+      "scope": "A rejected-SIP flow mentions a page from which the investor could place a purchase; its meaning and phase are unclear.",
+      "acceptance": [
+        "Clarify whether this is a provider-hosted payment link or CRM order placement and align it with the explicit placement deferral."
+      ],
+      "dependencies": [],
+      "questions": [
+        "Do not implement this as immediate financial order placement."
+      ],
+      "intervals": [
+        "01:28:50-01:33:50"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "ed5e2cdd5537e5349d5d5a3c878ef6ccc0da9cc218c47d73b47c32c7d99e2a5b"
+    },
+    {
+      "id": "R135-071",
+      "revision": 1,
+      "module": "Financial transactions and navigation",
+      "kind": "Requirement",
+      "title": "Remove NSE-order functions from the Schemes area",
+      "scope": "NSE orders/transaction functions should come from the new transaction area; the Schemes area is described as carrying unnecessary content.",
+      "acceptance": [
+        "Inventory and agree exact pages to relocate without deleting scheme data or breaking links."
+      ],
+      "dependencies": [],
+      "questions": [
+        "Exact current labels are partly garbled, so do not perform blanket Schemes cleanup."
+      ],
+      "intervals": [
+        "01:28:50-01:33:50"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "7c9fd4f06c1fb27ff79f1b2a1c3b4e39bccc8ba9fc74fed542acd7fe077ccbf2"
+    },
+    {
+      "id": "R135-072",
+      "revision": 1,
+      "module": "Performance and appraisals",
+      "kind": "Follow-up",
+      "title": "Reconcile dashboard calculations with the referenced workbook",
+      "scope": "The performance/dashboard implementation is described as present, but a tally against the referenced Excel sheet remains.",
+      "acceptance": [
+        "Obtain the referenced workbook/version and reconcile formulas and totals."
+      ],
+      "dependencies": [
+        "The referenced workbook/video and the existing dashboard formula."
+      ],
+      "questions": [
+        "Neither the workbook nor claimed existing behavior is verified by this extraction; do not import formulas from an earlier call."
+      ],
+      "intervals": [
+        "01:28:50-01:33:50",
+        "01:33:40-01:38:40"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "d5ef3a9183a970f45cbf455d35ed3dbee82066aeb3c3027869c621087b3e71a2"
+    },
+    {
+      "id": "R135-073",
+      "revision": 1,
+      "module": "Performance and appraisals",
+      "kind": "Requirement",
+      "title": "Salary and performance what-if view",
+      "scope": "Bring current salary from HR into the RM performance view; show current-performance implications and let the employee enter/slide a desired salary to see the parameter improvements required and the calculation.",
+      "acceptance": [
+        "Display current and target scenarios distinctly and explain approved formulas using actual HR inputs."
+      ],
+      "dependencies": [
+        "HR salary data and the approved performance/salary calculation rules."
+      ],
+      "questions": [
+        "Salary amounts are examples, not commitments. Increment/decrement policy, weights, effective dates and the exact formula remain to be supplied."
+      ],
+      "intervals": [
+        "01:33:40-01:38:40"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "798b314fd6e9963dad58593c0c0ff9116ea13e6b525618a2832e47ce918d4629"
+    },
+    {
+      "id": "R135-074",
+      "revision": 1,
+      "module": "Performance and appraisals",
+      "kind": "Requirement",
+      "title": "Configurable parameters with peer behavior input",
+      "scope": "Allow more performance parameters and include employees rating other employees for cooperation, responsiveness and task handoffs as a behavior component alongside performance.",
+      "acceptance": [
+        "Agree the eligible raters, questions, frequency, weights and visibility before scoring real employees."
+      ],
+      "dependencies": [],
+      "questions": [
+        "No precise weight, anonymous-rating rule, anti-retaliation mechanism or scoring formula is agreed."
+      ],
+      "intervals": [
+        "01:33:40-01:38:40"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "d561cc5743b7b957be1c19004565f4b13285164df775a8f993c01a56938a46fc"
+    },
+    {
+      "id": "R135-075",
+      "revision": 1,
+      "module": "Performance and appraisals",
+      "kind": "Requirement",
+      "title": "Normalize operations performance for different work types",
+      "scope": "Operations uses different parameters, standard task time and weights, normalized to 100 points or a percentage so differing mixes of transactions, physical work and cases do not unfairly bias comparison.",
+      "acceptance": [
+        "Reconcile the proposed operations formula with the referenced design and representative task mixes."
+      ],
+      "dependencies": [
+        "The referenced operations scoring design and task time/weight catalog."
+      ],
+      "questions": [
+        "The call gives the fairness objective, not a complete new formula or verified current behavior."
+      ],
+      "intervals": [
+        "01:38:30-01:43:30"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "472a53cf3ffa7af14e3bac7830b7dac810984d751530f0302117e1b0320d03ae"
+    },
+    {
+      "id": "R135-076",
+      "revision": 1,
+      "module": "Performance and appraisals",
+      "kind": "Requirement",
+      "title": "Continuously updated daily business and ranking",
+      "scope": "Calculate/display business and performance on a daily ongoing basis as well as the existing monthly framing, and support the discussed ranking/leaderboard.",
+      "acceptance": [
+        "Changing the date scope updates all agreed factors consistently and the ranking uses the approved measure."
+      ],
+      "dependencies": [],
+      "questions": [
+        "The source references existing features but does not independently prove them or specify every date-window rule."
+      ],
+      "intervals": [
+        "01:38:30-01:43:30"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "22522900bc6acdf6180cc7e820b2f8b5612863db38d45fe9d6d3e7510e61d983"
+    },
+    {
+      "id": "R135-077",
+      "revision": 1,
+      "module": "Performance and appraisals",
+      "kind": "Requirement",
+      "title": "Keep completed-month ratings stable after remapping",
+      "scope": "Management ratings may be entered at month end and then fixed; later client remapping should not rewrite the completed month's evaluation, while parameters remain administratively editable.",
+      "acceptance": [
+        "Define a period snapshot/locking policy and prove later client reassignment does not rewrite closed results."
+      ],
+      "dependencies": [],
+      "questions": [
+        "'May be end of month' is tentative; who can correct/reopen a period and how parameter changes apply remains unresolved."
+      ],
+      "intervals": [
+        "01:38:30-01:43:30"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "7da0fcfe98e8ae275f88fe13047f6ec19778b9d8bb842961975810380e1ab066"
+    },
+    {
+      "id": "R135-078",
+      "revision": 1,
+      "module": "Performance and appraisals",
+      "kind": "Needs clarification",
+      "title": "Clarify the 100-point warning/deduction component",
+      "scope": "A brief passage refers to 100 points, subtracting earned/lost points and warnings/management/HR parameters.",
+      "acceptance": [
+        "Request the precise referenced rule and examples before calculating deductions."
+      ],
+      "dependencies": [],
+      "questions": [
+        "Audio is too fragmented to identify the exact formula, relationship to total score or salary effect."
+      ],
+      "intervals": [
+        "01:38:30-01:43:30"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "db813e443da9f73eacf2e5be0150a8d4782d8555e323e69ce05cfe2bba94e089"
+    },
+    {
+      "id": "R135-079",
+      "revision": 1,
+      "module": "Review, rollout and adoption",
+      "kind": "Follow-up",
+      "title": "Shared requirements review and prioritization",
+      "scope": "Share a review page, collect Must/Should/later priorities and specific comments, and revalidate the resulting scope before implementation. This is the project review process, not an employee-facing CRM module.",
+      "acceptance": [],
+      "dependencies": [
+        "Review link",
+        "Presenter"
+      ],
+      "questions": [
+        "Who will complete the review? This is not automatically a new employee-facing CRM feature.",
+        "Who owns delivery, and has the link already been shared?"
+      ],
+      "intervals": [
+        "00:06:40-00:16:30",
+        "00:06:40-00:11:40"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "f6377aeb0adc68f3e41fe87235c4a8e33e1b5477787365314ae14d2d328c9960"
+    },
+    {
+      "id": "R135-080",
+      "revision": 1,
+      "module": "Review, rollout and adoption",
+      "kind": "Decision discussed",
+      "title": "Prioritize RM dashboard and HR with incremental sign-off",
+      "scope": "Prioritize RM dashboard changes and HR, present a module for sign-off, and move modules live one by one following approval; WhatsApp/NSE and other performance work follow.",
+      "acceptance": [
+        "Prepare a clearly scoped review sequence with separate approval gates."
+      ],
+      "dependencies": [],
+      "questions": [
+        "Initial 'HR first' is later paired with RM dashboard priority; confirm order rather than infer a rigid schedule. No calendar deadline is stated.",
+        "Was a deliverable promised, and what scope or date was actually agreed?"
+      ],
+      "intervals": [
+        "01:38:30-01:43:30",
+        "00:26:00-00:31:00"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "d35914bc51890b576fd17b18194662d4cc9358fb07c5531aee2f7b6e79cde596"
+    },
+    {
+      "id": "R135-081",
+      "revision": 1,
+      "module": "Review, rollout and adoption",
+      "kind": "Follow-up",
+      "title": "Build the habit of timely manual CRM logging",
+      "scope": "Staff should log meaningful calls/messages/activities as they happen rather than omit them or leave everything until day end; train and encourage CRM adoption first.",
+      "acceptance": [
+        "Agree an adoption/training follow-up distinct from software requirements."
+      ],
+      "dependencies": [],
+      "questions": [
+        "This is an operational expectation, not authority to fabricate missing activity, assign punitive scores or auto-log invented calls."
+      ],
+      "intervals": [
+        "01:09:30-01:14:30",
+        "01:38:30-01:43:30",
+        "01:43:20-01:48:20",
+        "01:48:10-01:52:02"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "08db390c6c8accecdec2686e96535686d551843285536738633966d296ff45fe"
+    },
+    {
+      "id": "R135-082",
+      "revision": 1,
+      "module": "Future intelligence and assistants",
+      "kind": "Proposal to confirm",
+      "title": "Future client-specific opportunity intelligence",
+      "scope": "Consider intelligent opportunities using client profile, family, SIPs, transactions and return context rather than only a large set of static business rules.",
+      "acceptance": [
+        "If later approved, specify explainable opportunity rules, sources and boundaries."
+      ],
+      "dependencies": [
+        "Reliable client/profile/transaction data, agreed opportunity logic and human review boundaries."
+      ],
+      "questions": [
+        "Confirm the scope and timing for opportunity intelligence separately from the explicitly deferred voice/agent assistant. No model, scoring formula or automatic investment action was agreed."
+      ],
+      "intervals": [
+        "01:33:40-01:38:40",
+        "01:48:10-01:52:02"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "b9e15cef261e5579447fdfad1f967f6cf1045b517a96cbb38ef0a280193a1e2d"
+    },
+    {
+      "id": "R135-083",
+      "revision": 1,
+      "module": "Future intelligence and assistants",
+      "kind": "Deferred decision",
+      "title": "Defer voice agents until CRM adoption and learning",
+      "scope": "Voice-driven task/activity/meeting creation through WhatsApp or an assistant is discussed as future potential. The closing direction is to let staff use CRM for one or two months, learn the tools and understand challenges before introducing agentic features. Future examples include spoken handover notes, task creation, activity/call logging and meeting follow-ups; none is approved for automatic execution now.",
+      "acceptance": [
+        "The immediate scope remains manual CRM adoption; future AI is labeled deferred and requires its own approval.",
+        "If later accepted, captured speech must remain reviewable before submission."
+      ],
+      "dependencies": [
+        "CRM adoption and staff education before later AI scope approval."
+      ],
+      "questions": [
+        "One or two months is an adoption horizon, not a committed go-live date. No actual automated recording or financial action is authorized.",
+        "Not an immediate AI commitment; later discussion explicitly keeps manual entry first."
+      ],
+      "intervals": [
+        "01:43:20-01:48:20",
+        "01:48:10-01:52:02",
+        "01:04:40-01:09:40",
+        "01:09:30-01:14:30"
+      ],
+      "trackerRefs": [],
+      "sourceNote": "Interpreted from the Marathi-English recording. Uncertain details are retained as questions. Acceptance checks are proposed for review, not claimed as verbatim agreements.",
+      "reviewStatus": "pending",
+      "hash": "c8424d7bd58b7023854e5c7427ec359ce72b2d7e1fb5385a8d5ca8544c5030fe"
+    }
+  ]
+}
