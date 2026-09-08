@@ -1,20 +1,23 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:06.270
-Operational conversations and delivery status share one workspace. No business number is connected.
+00:00:00.000 --> 00:00:06.980
+WhatsApp campaigns work the way the team already runs them on InvestWell: a campaign list with its audience, schedule and delivery status.
 
-00:00:06.320 --> 00:00:12.990
-Within the sample service window, staff can simulate a specific operational reply.
+00:00:07.030 --> 00:00:13.105
+A new campaign starts with a name. Then the three familiar steps: choose the clients, choose the report, and schedule it.
 
-00:00:13.040 --> 00:00:19.190
-When the service window is closed, a relevant approved template is required.
+00:00:13.155 --> 00:00:20.669
+Choose the clients: family heads only, opted-out clients excluded automatically, or search by name, relationship manager, PAN or mobile.
 
-00:00:19.240 --> 00:00:25.430
-The template preview appears in the conversation. This demonstration sends no external message.
+00:00:20.719 --> 00:00:26.910
+Choose the report to send. Only a mapped template can go out; an unmapped one stays greyed until it is approved and mapped.
 
-00:00:25.480 --> 00:00:32.190
-An opt-out blocks further messages, including automated retries.
+00:00:26.960 --> 00:00:32.617
+Send now or schedule it, once or monthly, with a preview of the exact message the first client will receive.
 
-00:00:32.240 --> 00:00:37.510
-Review the failure, consent and duplicate checks before retrying. Delivery is never guaranteed.
+00:00:32.667 --> 00:00:38.440
+The campaign joins the list as Scheduled. Delivery and read counts come back from the provider after it goes out.
+
+00:00:38.490 --> 00:00:46.143
+Templates are mapped to the approved WhatsApp template by its API campaign name, with category, format and sample values, exactly as on InvestWell.
 

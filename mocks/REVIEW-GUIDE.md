@@ -20,7 +20,7 @@ Review the sample salary components. As HR manager, submit the draft; as Senior 
 
 ![Attendance calendar](previews/02-attendance-leave.jpg)
 
-Compare app login with attendance. Approve the pending time correction, try converting an eligible absence to leave, and submit a new leave request. Review the resulting calendar. Confirm leave entitlements, half-day rules, holidays, correction deadlines and check-in requirements. The photo box does not access a camera.
+Compare app login with attendance. Approve the pending time correction, try converting an eligible absence to leave, and submit a new leave request. Review the resulting calendar. Preview the check-in: it starts with the employee ID, typed or scanned, then a face-ID match, and only then is attendance recorded with time and source. Confirm leave entitlements, half-day rules, holidays, correction deadlines and the check-in devices. No camera is accessed in this mock.
 
 ## 3. Employee hub
 
@@ -34,9 +34,9 @@ Explore the organization, login-today indicators and profiles. Compare a self pr
 
 [Screens](./#whatsapp) · [Video](videos/04-whatsapp.mp4)
 
-![WhatsApp workspace](previews/04-whatsapp.jpg)
+![WhatsApp campaigns](previews/04-whatsapp.jpg)
 
-Try the three sample conversations: open service window, closed window and opted-out recipient. Preview a template and inspect the separate failed-message retry checks. Confirm the business number, message ownership, approved templates and reminder rules. Nothing here sends a real message.
+Built on the shape of the WhatsApp Scheduler the team already uses on InvestWell. Create a campaign: name it, choose the clients (family heads only, exclusions, search by name, relationship manager, PAN or mobile), choose a mapped report template, schedule it once or monthly, and watch it join the campaign list. Open Templates to map a report to its approved WhatsApp template by API campaign name, with category, format and sample values. Confirm the business number, which report templates to map first, the sending hours and who may create campaigns. Nothing here sends a real message.
 
 ## 5. Performance and appraisals
 

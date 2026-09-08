@@ -1,20 +1,26 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:07.510
+00:00:00.000 --> 00:00:04.379
 The calendar brings attendance, approved leave and pending corrections into one view.
 
-00:00:07.560 --> 00:00:15.870
+00:00:04.429 --> 00:00:09.343
 A senior approves the correction. The day changes to Present; the original record is retained.
 
-00:00:15.920 --> 00:00:22.790
+00:00:09.393 --> 00:00:14.701
 An eligible absence can be converted to leave after senior approval, with a reason and balance check.
 
-00:00:22.840 --> 00:00:29.710
+00:00:14.751 --> 00:00:19.154
 Apply for leave with dates, type and a reason. It remains pending until reviewed.
 
-00:00:29.760 --> 00:00:35.710
+00:00:19.204 --> 00:00:23.796
 Approved leave appears on the calendar. Pending requests do not silently become attendance.
 
-00:00:35.760 --> 00:00:40.990
-App login is separate from attendance. Photo check-in is shown without accessing a camera.
+00:00:23.846 --> 00:00:29.407
+Attendance starts with the employee ID, typed or scanned from the ID card, before anything is recorded.
+
+00:00:29.457 --> 00:00:35.148
+Face ID then confirms it is the same employee. No camera is accessed in this mock and no photo is stored.
+
+00:00:35.198 --> 00:00:40.112
+Attendance is recorded with the time and the source. Login to the app stays separate from attendance.
 
