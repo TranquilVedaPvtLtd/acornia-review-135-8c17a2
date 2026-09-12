@@ -54,6 +54,14 @@ Compare relationship-manager and operations scores, daily/monthly periods, and t
 
 Try saving an activity without a description, then with a useful description. Employee task edits are disabled. As Senior approver, propose a sample amount change with a reason and inspect the separate checker step and history. Try the processed-task lock. Confirm which roles count as seniors, eligible fields, checker independence and exceptions.
 
+## 7. Recruitment
+
+[Screens](./#recruitment)
+
+![Recruitment](previews/07-recruitment.jpg)
+
+Follow one candidate from a manpower requirement to conversion into an employee. Try the gates: a candidate cannot move to interview until the screening checklist is complete, cannot reach final evaluation until every round has feedback, cannot receive an offer before compensation and final approval, and cannot be marked joined until the mandatory pre-joining items are done. Add a candidate with mobile 98200 00219 to see the duplicate warning. Switch the preview role to see what the senior approver and a hiring manager can do.
+
 ## Share your feedback
 
 Each module has a review-status selector and a comment box. Choose a status, describe requested changes, then copy or download the feedback and share it in Jarvis Daily Group. The private GitHub submission is another explicit sharing route and requires access. A local draft is not a submitted review.

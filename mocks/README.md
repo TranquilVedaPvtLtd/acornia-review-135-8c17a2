@@ -1,6 +1,6 @@
 # Acornia people and operations prototype
 
-Six module previews with entirely fictional data. This is a static design-review artifact, not the CRM, HR system or a connected messaging application.
+Seven module previews with entirely fictional data. This is a static design-review artifact, not the CRM, HR system or a connected messaging application.
 
 - Payroll: maker/checker simulation, salary breakdown and sample payslip.
 - Attendance and leave: calendar, leave application and approval, regularization, photo-check-in placeholder.
@@ -8,6 +8,7 @@ Six module previews with entirely fictional data. This is a static design-review
 - WhatsApp: open/closed conversation windows, templates, opt-outs, delivery and reviewed retry preview.
 - Performance and appraisals: illustrative weighted scores, separate operations model, salary what-if and a self/manager review cycle.
 - Activity and task controls: required descriptions, senior-only edit proposal, reason, separate checker, history and processed-instruction lock.
+- Recruitment: manpower requirement and approval, job openings, one candidate master with a duplicate warning, a controlled pipeline board, screening checklist gate, interview rounds with role-specific feedback, final selection and approval chain, offer, pre-joining checklist, convert to employee, dashboard and reports. Screens only, no video yet.
 
 All demo transaction state resets on reload. Role switching demonstrates a proposed user experience, not server-side authorization. No real documents are uploaded, photos captured, messages sent, salaries paid or employee outcomes decided.
 
