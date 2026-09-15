@@ -1,6 +1,6 @@
 # Acornia people and operations: review guide
 
-These are six interactive mock modules, not production changes. Every person, amount, document and message is fictional. Videos are intentionally silent with on-screen captions.
+These are nine interactive mock modules, not production changes. Every person, amount, document and message is fictional. Videos are intentionally silent with on-screen captions.
 
 [Open the mock collection](./) · [Watch all six walkthroughs](./#videos)
 
@@ -61,6 +61,22 @@ Try saving an activity without a description, then with a useful description. Em
 ![Recruitment](previews/07-recruitment.jpg)
 
 Follow one candidate from a manpower requirement to conversion into an employee. Try the gates: a candidate cannot move to interview until the screening checklist is complete, cannot reach final evaluation until every round has feedback, cannot receive an offer before compensation and final approval, and cannot be marked joined until the mandatory pre-joining items are done. Add a candidate with mobile 98200 00219 to see the duplicate warning. Switch the preview role to see what the senior approver and a hiring manager can do.
+
+## 8. Internal activities
+
+[Screens](./#internal)
+
+![Internal activities](previews/08-internal-activities.jpg)
+
+Open the activities summary to see client, internal, training and task time in one log, then the internal activities list. Filter by category, employee and business or non-business. Open an activity to read its participants, objective, what happened and its outputs. Add an internal activity: the description of what happened is required, and an action item needs an owner and a due date. Convert an open action item into a CRM task. Switch to Employee to see only your own activities. Confirm the categories, who may record an activity for others, and whether every action item must become a task.
+
+## 9. Training and compliance
+
+[Screens](./#training)
+
+![Training and compliance](previews/09-training-compliance.jpg)
+
+Open the register, filter by type, category and status, and open a training record. Walk its tabs: attendance with check-in and check-out per participant, survey, assessment with a pass mark, documents and the audit trail. Try to complete a planned training: it is blocked until it is scheduled, attendance is recorded for everyone, scores are in for those who attended, and a mandatory training has its attendance sheet uploaded. On a completed training, raise a correction and see it land in the audit trail without changing the record. On the mandatory tracker, exempt someone with a reason and open the report outputs. Switch to Employee to see only your own history. Confirm which trainings are mandatory for which roles and how often, the pass mark, the evidence an audit needs, who approves exemptions and the retention period.
 
 ## Share your feedback
 
