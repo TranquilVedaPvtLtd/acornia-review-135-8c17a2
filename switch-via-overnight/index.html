@@ -143,6 +143,22 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid 
 .qs ol{margin:8px 0 0;padding-left:20px;display:grid;gap:8px;font-size:14px}
 .qs li b{font-weight:600}
 .today-stamp{font:500 12px var(--mono);color:var(--muted)}
+.subs{list-style:none;margin:4px 0 0;padding:8px 0 0;border-top:1px dashed var(--line);display:grid;gap:5px}
+.subs li{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:baseline;font-size:12.5px}
+.subs .d{font:500 11.5px var(--mono);color:var(--muted);white-space:nowrap}
+.subs .who{font-size:11px;color:var(--muted);white-space:nowrap}
+.subs li.done .t{text-decoration:line-through;color:var(--muted)}
+.stop .tag{display:inline-block;margin-bottom:2px;padding:1px 7px;border-radius:5px;font:600 11px var(--mono);background:var(--sunk);border:1px solid var(--line);color:var(--muted)}
+.stop.via .tag{background:var(--warn-soft);color:var(--warn);border-color:transparent}
+.stop.to .tag{background:var(--ok-soft);color:var(--ok);border-color:transparent}
+.tbl-wrap{overflow-x:auto}
+table.days-tbl{width:100%;border-collapse:collapse;font-size:13.5px;min-width:560px}
+.days-tbl th{text-align:left;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;padding:10px 14px;border-bottom:1px solid var(--line)}
+.days-tbl td{padding:9px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+.days-tbl tr:last-child td{border-bottom:0}
+.days-tbl .mono{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
+.days-tbl tr.sw td{font-weight:600}
+.answered{color:var(--ok);font-weight:600}
 @media (prefers-reduced-motion: no-preference){
   .card{transition:background .25s,border-color .25s}
   .flash{animation:flash 1.2s ease}
@@ -157,7 +173,7 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid 
   <header>
     <div class="eyebrow">Acornia &middot; Tasks &middot; proposal for Reshma</div>
     <h1>Switch through an overnight fund</h1>
-    <p class="lede">Today a switch has one From and one To. Operations often go Equity &rarr; Overnight today, then Overnight &rarr; Equity a few days later, and raise those as two unrelated tasks. This demo shows one form that records both moves, files them as two linked tasks, and marks the first one Completed on its own, so admins can see it.</p>
+    <p class="lede">Today a switch has one From and one To. Operations often go Equity &rarr; Overnight today, then Overnight &rarr; Equity a few days later, and raise those as two unrelated tasks. This demo shows one form that records both moves, files them as two linked tasks each with its own sub-tasks, and marks the first one Completed on its own, so admins can see it. The final switch falls on the 6th working day.</p>
     <span class="demo-flag">Demo only. Nothing here reads from or writes to the CRM. The client and funds are samples.</span>
   </header>
 
@@ -230,8 +246,8 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid 
 
           <div class="field" style="margin:0" id="gap-field">
             <label class="lbl" for="gap">Second switch after <span class="new-tag">NEW</span></label>
-            <div class="days"><input type="number" id="gap" value="3" min="1" max="10"> <span>working days after switch 1 is marked Completed</span></div>
-            <span class="hint">Units in an overnight fund are usually allotted T+1, so the second switch waits until they show.</span>
+            <div class="days"><input type="number" id="gap" value="6" min="1" max="15"> <span>working days after switch 1 is marked Completed</span></div>
+            <span class="hint">6 working days, as Operations asked. Weekends and holidays are not counted.</span>
           </div>
         </div>
 
@@ -282,6 +298,15 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid 
     </div>
   </section>
 
+  <section>
+    <div class="section-head">
+      <div class="eyebrow">Every sub-task</div>
+      <h2>Both switches, day by day</h2>
+      <p>The dates assume switch 1 is completed on the day it is raised. If it is completed later, everything after it moves with it. Working days only: weekends and 2 October (Gandhi Jayanti) are skipped.</p>
+    </div>
+    <div class="panel tbl-wrap"><table class="days-tbl" id="days-tbl"></table></div>
+  </section>
+
   <!-- 3. how -->
   <section>
     <div class="section-head">
@@ -295,15 +320,15 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid 
         <ul>
           <li>A Route choice on the Switch template: Direct (today) or Through an overnight fund.</li>
           <li>A "Park in" field, filled with the same fund house's overnight fund, changeable to a liquid fund.</li>
-          <li>A "second switch after N working days" box, 3 by default.</li>
+          <li>A "second switch after N working days" box, 6 by default.</li>
           <li>The same-fund-house rule checked on all three schemes.</li>
         </ul>
       </div>
       <div class="panel note">
         <h3>On the tasks</h3>
         <ul>
-          <li>Submitting files switch 1 (From &rarr; Overnight) as a normal switch task, marked "1 of 2".</li>
-          <li>When switch 1 is marked Completed, switch 2 (Overnight &rarr; To, all units) is filed by itself, marked "2 of 2", dated N working days later, linked to switch 1.</li>
+          <li>Submitting files switch 1 (From &rarr; Overnight) as a switch task marked "1 of 2", with three sub-tasks: the switch, informing the client, and checking it is done.</li>
+          <li>When switch 1 is marked Completed, switch 2 (Overnight &rarr; To, all units) is filed by itself, marked "2 of 2", on the 6th working day, linked to switch 1, with four sub-tasks: the switch, informing the client, checking it is done and updated in Wealth Elite, and Goal Mapping for the RM.</li>
           <li>Switch 2 uses the "switch in progress, not yet reflected" pick added on 21 Sep, so it does not wait for InvestWell.</li>
         </ul>
       </div>
@@ -321,11 +346,12 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid 
   <section class="panel qs">
     <h2>Questions for Reshma before we build</h2>
     <ol>
-      <li><b>How many days</b> between the two switches: always 3 working days, or does it depend on the fund?</li>
+      <li><b>How many days</b> between the two switches: <span class="answered">answered, 6 working days.</span></li>
       <li><b>Always an overnight fund</b>, or sometimes a liquid fund? The demo lets them change it.</li>
       <li><b>Switch 2 amount:</b> always all units that landed in the overnight fund? The demo assumes yes.</li>
       <li><b>Who gets switch 2:</b> the same Operations person as switch 1? The demo assumes yes.</li>
       <li><b>If switch 1 fails or is cancelled</b>, switch 2 is never filed. Is that right?</li>
+      <li><b>Sub-task days:</b> the demo counts working days for every sub-task (check on the 3rd working day, Goal Mapping on the 6th after switch 2). Today's Switch template counts calendar days. Is working days right for this flow?</li>
     </ol>
   </section>
 
@@ -359,11 +385,44 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid 
   var fmtDay = function (d) {
     return d.toLocaleDateString("en-IN", { weekday: "short", day: "2-digit", month: "short", year: "numeric" });
   };
+  var HOLIDAYS = ["2026-10-02"]; // Gandhi Jayanti; the real build reads the CRM's holiday list
+  var ymd = function (d) { return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); };
   var addWorkingDays = function (d, n) {
     var x = new Date(d.getTime());
-    while (n > 0) { x.setDate(x.getDate() + 1); var w = x.getDay(); if (w !== 0 && w !== 6) n -= 1; }
+    while (n > 0) {
+      x.setDate(x.getDate() + 1);
+      var w = x.getDay();
+      if (w !== 0 && w !== 6 && HOLIDAYS.indexOf(ymd(x)) === -1) n -= 1;
+    }
     return x;
   };
+  var short = function (d) { return d.toLocaleDateString("en-IN", { weekday: "short", day: "2-digit", month: "short" }); };
+  var bare = function (name) { return name.replace(" Reg (G)", ""); };
+
+  // The sub-tasks, from today's Switch template (Switch; Information to be
+  // sent to client; check switch done and updated in Wealth Elite; Goal
+  // Mapping), laid across the two switches. Switch 1 only parks the money, so
+  // Goal Mapping waits for switch 2.
+  function subtasksFor(leg, start, fromName, toName) {
+    if (leg === 1) {
+      return [
+        { t: "Switch " + bare(fromName) + " into " + bare(toName), d: start, who: "Operations" },
+        { t: "Information to be sent to client", d: start, who: "Operations" },
+        { t: "Check switch done and units in " + bare(toName), d: addWorkingDays(start, 3), who: "Operations" }
+      ];
+    }
+    return [
+      { t: "Switch " + bare(fromName) + " to " + bare(toName), d: start, who: "Operations" },
+      { t: "Information to be sent to client", d: start, who: "Operations" },
+      { t: "Check switch done and updated in Wealth Elite", d: addWorkingDays(start, 3), who: "Operations" },
+      { t: "Goal Mapping", d: addWorkingDays(start, 6), who: "RM" }
+    ];
+  }
+  function subsHtml(list, allDone) {
+    return '<ul class="subs">' + list.map(function (x) {
+      return '<li class="' + (allDone ? "done" : "") + '"><span class="d">' + short(x.d) + '</span><span class="t">' + x.t + '</span><span class="who">' + x.who + "</span></li>";
+    }).join("") + "</ul>";
+  }
   var sameDay = function (a, b) { return a.toDateString() === b.toDateString(); };
 
   // ---- the form ----
@@ -409,23 +468,41 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid 
     $("amount-field").hidden = by() === "all";
     $("amount").previousElementSibling.firstChild.textContent = by() === "units" ? "Units to switch " : "Switch amount (INR) ";
 
-    var h = holding(), gap = Math.max(1, Number($("gap").value) || 3), what = by() === "all" ? "all units" : by() === "units" ? $("amount").value + " units" : fmtINR($("amount").value);
+    var h = holding(), gap = Math.max(1, Number($("gap").value) || 6), what = by() === "all" ? "all units" : by() === "units" ? $("amount").value + " units" : fmtINR($("amount").value);
     var stops = [
-      '<div class="stop"><i></i><div><div class="nm">' + h.name + '</div><div class="sub">held today</div></div></div>'
+      '<div class="stop"><i></i><div><span class="tag">Step 1 &middot; From</span><div class="nm">' + h.name + '</div><div class="sub">held today</div></div></div>'
     ];
     if (via) {
-      stops.push('<div class="stop via"><i></i><div><div class="hop">switch 1 &middot; today &middot; ' + what + '</div><div class="nm">' + $("via").value + '</div><div class="sub">parked for about ' + gap + ' working days</div></div></div>');
-      stops.push('<div class="stop to"><i></i><div><div class="hop">switch 2 &middot; ' + gap + ' working days after switch 1 is done &middot; all units</div><div class="nm">' + $("to").value + '</div><div class="sub">where the money ends up</div></div></div>');
+      stops.push('<div class="stop via"><i></i><div><span class="tag">Step 2 &middot; switch 1 &middot; ' + short(START) + '</span><div class="hop">' + what + '</div><div class="nm">' + $("via").value + '</div><div class="sub">parked for ' + gap + ' working days</div></div></div>');
+      stops.push('<div class="stop to"><i></i><div><span class="tag">Step 3 &middot; switch 2 &middot; ' + short(addWorkingDays(START, gap)) + '</span><div class="hop">all units, on working day ' + gap + '</div><div class="nm">' + $("to").value + '</div><div class="sub">where the money ends up</div></div></div>');
     } else {
       stops.push('<div class="stop to"><i></i><div><div class="hop">one switch &middot; today &middot; ' + what + '</div><div class="nm">' + $("to").value + '</div></div></div>');
     }
     $("flow").innerHTML = stops.join("");
     $("made").innerHTML = via
-      ? '<div class="eyebrow">Tasks it will create</div>' +
-        '<div class="made"><span class="n">1 of 2</span><span>Filed now, sent to Operations. Counts as Completed on the day it is done.</span></div>' +
-        '<div class="made"><span class="n">2 of 2</span><span>Filed by itself when switch 1 is marked Completed, dated ' + gap + ' working days later.</span></div>'
+      ? '<div class="eyebrow">Tasks and sub-tasks it will create</div>' +
+        '<div class="made"><span class="n">1 of 2</span><span>Filed now, sent to Operations. Counts as Completed on the day it is done.' + subsHtml(subtasksFor(1, START, h.name, $("via").value)) + '</span></div>' +
+        '<div class="made"><span class="n">2 of 2</span><span>Filed by itself when switch 1 is marked Completed, on working day ' + gap + '.' + subsHtml(subtasksFor(2, addWorkingDays(START, gap), $("via").value, $("to").value)) + '</span></div>'
       : '<div class="eyebrow">Tasks it will create</div><div class="made"><span class="n">1 task</span><span>A single switch, exactly as today.</span></div>';
+    renderDays();
     validate();
+  }
+
+  // Every sub-task across both switches, as one dated list.
+  function renderDays() {
+    var h = holding(), via = route() === "via", gap = Math.max(1, Number($("gap").value) || 6);
+    var head = "<thead><tr><th>Date</th><th>Task</th><th>Sub-task</th><th>Who</th></tr></thead>";
+    if (!via) {
+      $("days-tbl").innerHTML = head + "<tbody><tr><td colspan=\"4\">A direct switch keeps today's Switch sub-tasks exactly as they are.</td></tr></tbody>";
+      return;
+    }
+    var s1 = subtasksFor(1, START, h.name, $("via").value).map(function (x) { return [x, "Switch 1 of 2"]; });
+    var s2 = subtasksFor(2, addWorkingDays(START, gap), $("via").value, $("to").value).map(function (x) { return [x, "Switch 2 of 2"]; });
+    var rows = s1.concat(s2).map(function (r, i) {
+      var x = r[0], sw = /^Switch /.test(x.t);
+      return '<tr class="' + (sw ? "sw" : "") + '"><td class="mono">' + short(x.d) + "</td><td>" + r[1] + "</td><td>" + x.t + "</td><td>" + x.who + "</td></tr>";
+    });
+    $("days-tbl").innerHTML = head + "<tbody>" + rows.join("") + "</tbody>";
   }
 
   // ---- the walk-through ----
@@ -450,7 +527,8 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid 
       '<div class="card-top"><span class="tn">' + (t.number ? "#" + t.number : "not filed yet") + '</span><span>' + pill + leg + "</span></div>" +
       '<div class="ttl">' + t.title + "</div>" +
       '<div class="meta">' + t.detail + "</div>" +
-      '<div class="meta">' + when + " &middot; Demo Client (sample)</div>" + other + "</div>";
+      '<div class="meta">' + when + " &middot; Demo Client (sample)</div>" +
+      (t.subs ? subsHtml(t.subs, t.status === "done") : "") + other + "</div>";
   }
 
   function renderBoard(fresh) {
@@ -470,14 +548,15 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid 
   $("form").addEventListener("submit", function (e) {
     e.preventDefault();
     if (!validate()) return;
-    var h = holding(), via = route() === "via", gap = Math.max(1, Number($("gap").value) || 3);
+    var h = holding(), via = route() === "via", gap = Math.max(1, Number($("gap").value) || 6);
     var what = by() === "all" ? "all units" : by() === "units" ? $("amount").value + " units" : fmtINR($("amount").value);
     state.submitted = true; $("submit").disabled = true;
     if (via) {
-      state.plan = { gap: gap, via: $("via").value, to: $("to").value };
+      state.plan = { gap: gap, via: $("via").value, to: $("to").value, from: h.name };
       state.tasks.push({ id: "a", number: 18901, leg: 1, pairWith: null, status: "open", due: new Date(START.getTime()),
         title: "Switch: " + h.name.replace(" Reg (G)", "") + " → " + $("via").value.replace(" Reg (G)", ""),
-        detail: "Switch 1 of 2 &middot; " + what + " &middot; Urgent &middot; Operations" });
+        detail: "Switch 1 of 2 &middot; " + what + " &middot; Urgent &middot; Operations",
+        subs: subtasksFor(1, START, h.name, $("via").value) });
       state.tasks.push({ id: "b", number: null, leg: 2, pairWith: 18901, status: "planned",
         title: "Switch: " + $("via").value.replace(" Reg (G)", "") + " → " + $("to").value.replace(" Reg (G)", ""),
         detail: "Switch 2 of 2 &middot; all units &middot; " + gap + " working days after switch 1" });
@@ -504,10 +583,11 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid 
     }
     var b = state.tasks[1];
     b.status = "open"; b.number = 18902; b.due = addWorkingDays(state.today, state.plan.gap);
+    b.subs = subtasksFor(2, b.due, state.plan.via, state.plan.to);
     a.pairWith = 18902;
     b.detail = "Switch 2 of 2 &middot; all units that landed in the overnight fund &middot; From shows “switch in progress (#18901), not yet reflected”";
     $("do-advance").disabled = false;
-    $("log").innerHTML = "<b>Switch 1 completed.</b> It now counts in Today &rsaquo; Completed for the admins. Switch 2 was filed by itself as #18902, due " + fmtDay(b.due) + ".";
+    $("log").innerHTML = "<b>Switch 1 completed.</b> It now counts in Today &rsaquo; Completed for the admins. Switch 2 was filed by itself as #18902 with its four sub-tasks, due " + fmtDay(b.due) + ", the " + state.plan.gap + "th working day.";
     renderBoard("b");
   });
 
