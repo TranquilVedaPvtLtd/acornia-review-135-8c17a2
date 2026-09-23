@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<style>html,body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
+<title>Switch via Overnight Fund</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F5F6F3; --surface:#FFFFFF; --sunk:#F0F2EE; --ink:#1E2320; --muted:#646C66; --line:#E1E5DF;
+  --primary:#6E8A62; --primary-ink:#FFFFFF; --primary-soft:#E8EFE4;
+  --accent:#4F46E5; --accent-soft:#EEF0FF;
+  --ok:#1D7F55; --ok-soft:#E3F3EB; --warn:#9A6A12; --warn-soft:#FBF1DC; --bad:#B42318; --bad-soft:#FDECEA;
+  --radius:10px;
+  --sans:"IBM Plex Sans",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#111412; --surface:#191D1A; --sunk:#141715; --ink:#E6EAE5; --muted:#9BA49D; --line:#2A302C;
+    --primary:#8EAA80; --primary-ink:#0F130F; --primary-soft:#1F2A1C;
+    --accent:#8F89F2; --accent-soft:#23224A;
+    --ok:#5CC592; --ok-soft:#14291F; --warn:#E0B25A; --warn-soft:#2B2413; --bad:#F2877D; --bad-soft:#2E1714;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#111412; --surface:#191D1A; --sunk:#141715; --ink:#E6EAE5; --muted:#9BA49D; --line:#2A302C;
+  --primary:#8EAA80; --primary-ink:#0F130F; --primary-soft:#1F2A1C;
+  --accent:#8F89F2; --accent-soft:#23224A;
+  --ok:#5CC592; --ok-soft:#14291F; --warn:#E0B25A; --warn-soft:#2B2413; --bad:#F2877D; --bad-soft:#2E1714;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--sans);padding-inline:16px;padding-block:28px 64px}
+.wrap{max-width:1080px;margin:0 auto;display:grid;gap:28px}
+h1,h2,h3{text-wrap:balance;margin:0;line-height:1.2}
+h1{font-size:28px;font-weight:700;letter-spacing:-.01em}
+h2{font-size:19px;font-weight:600}
+h3{font-size:15px;font-weight:600}
+p{margin:0}
+.lede{color:var(--muted);max-width:70ch;margin-top:8px}
+.demo-flag{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:6px 10px;border-radius:999px;background:var(--warn-soft);color:var(--warn);font-size:13px;font-weight:500}
+.eyebrow{font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.section-head{display:grid;gap:4px;margin-bottom:14px}
+.section-head p{color:var(--muted);max-width:72ch}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+.grid-2{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:20px;align-items:start}
+@media (max-width:860px){.grid-2{grid-template-columns:1fr}}
+
+/* the form replica */
+.dialog{padding:22px}
+.dialog-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.dialog-title h3{font-size:17px}
+.tpl{background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 25%,transparent);border-radius:8px;padding:10px 12px;display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:16px}
+.tpl strong{color:var(--accent);font-weight:600}
+.tpl small{display:block;color:var(--muted);font-size:12.5px}
+.field{display:grid;gap:6px;margin-bottom:14px}
+label.lbl{font-size:13.5px;font-weight:500}
+label.lbl .req{color:var(--bad)}
+.hint{font-size:12.5px;color:var(--muted)}
+select,input[type=text],input[type=number]{width:100%;height:40px;border:1px solid var(--line);background:var(--sunk);color:var(--ink);border-radius:8px;padding:0 12px;font:inherit;font-size:14px}
+select:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.box{border:1px solid var(--line);border-radius:8px;padding:14px;display:grid;gap:12px;background:var(--surface)}
+.route{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media (max-width:520px){.route{grid-template-columns:1fr}}
+.route label{display:grid;gap:3px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;cursor:pointer;background:var(--sunk)}
+.route label:has(input:checked){border-color:var(--primary);background:var(--primary-soft)}
+.route input{margin:0 6px 0 0;accent-color:var(--primary)}
+.route b{font-weight:600;font-size:14px}
+.route span{font-size:12.5px;color:var(--muted)}
+.new-tag{display:inline-block;margin-left:6px;padding:1px 6px;border-radius:5px;background:var(--accent-soft);color:var(--accent);font-size:11px;font-weight:600;letter-spacing:.03em;vertical-align:1px}
+.legs{display:grid;gap:10px}
+.leg-row{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start}
+.leg-dot{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font:600 12px var(--mono);background:var(--sunk);border:1px solid var(--line);color:var(--muted);margin-top:26px}
+.leg-dot.via{background:var(--warn-soft);color:var(--warn);border-color:transparent}
+.radios{display:flex;gap:16px;flex-wrap:wrap;font-size:14px}
+.radios input{accent-color:var(--primary);margin-right:5px}
+.err{color:var(--bad);font-size:12.5px}
+.days{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.days input{width:80px;flex:0 0 auto}
+.btn{height:40px;padding:0 16px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:500 14px var(--sans);cursor:pointer}
+.btn.primary{background:var(--primary);border-color:var(--primary);color:var(--primary-ink)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.actions{display:flex;justify-content:flex-end;gap:10px;margin-top:6px;flex-wrap:wrap}
+
+/* the plan preview beside the form */
+.plan{padding:18px;display:grid;gap:14px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px)}
+.flow{display:grid;gap:0}
+.stop{display:grid;grid-template-columns:18px 1fr;gap:12px;position:relative;padding-bottom:16px}
+.stop:last-child{padding-bottom:0}
+.stop::before{content:"";position:absolute;left:8px;top:18px;bottom:0;width:2px;background:var(--line)}
+.stop:last-child::before{display:none}
+.stop i{width:18px;height:18px;border-radius:50%;background:var(--surface);border:2px solid var(--muted);margin-top:2px}
+.stop.via i{border-color:var(--warn)}
+.stop.to i{border-color:var(--ok)}
+.stop .nm{font-weight:500}
+.stop .sub{font-size:12.5px;color:var(--muted)}
+.hop{font:500 12px var(--mono);color:var(--muted);margin:2px 0 4px}
+.tasks-made{display:grid;gap:8px;border-top:1px dashed var(--line);padding-top:12px}
+.made{display:flex;gap:10px;align-items:flex-start;font-size:13.5px}
+.made .n{font:600 12px var(--mono);padding:2px 7px;border-radius:5px;background:var(--sunk);border:1px solid var(--line);white-space:nowrap}
+
+/* the walk-through */
+.clock{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid var(--line)}
+.clock .day{font:600 14px var(--mono)}
+.clock .day span{color:var(--muted);font-weight:400}
+.steps-bar{display:flex;gap:8px;flex-wrap:wrap}
+.walk{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0}
+@media (max-width:860px){.walk{grid-template-columns:1fr}}
+.col{padding:16px;display:grid;gap:12px;align-content:start}
+.col + .col{border-left:1px solid var(--line)}
+@media (max-width:860px){.col + .col{border-left:0;border-top:1px solid var(--line)}}
+.col-h{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.col-h small{color:var(--muted);font-size:12.5px}
+.card{border:1px solid var(--line);border-radius:8px;padding:12px;display:grid;gap:6px;background:var(--surface)}
+.card.faded{background:var(--sunk);border-style:dashed}
+.card-top{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}
+.tn{font:600 12.5px var(--mono);color:var(--muted)}
+.ttl{font-weight:600;font-size:14px}
+.meta{font-size:12.5px;color:var(--muted)}
+.pill{font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.p-assigned{background:var(--accent-soft);color:var(--accent)}
+.p-done{background:var(--ok-soft);color:var(--ok)}
+.p-planned{background:var(--warn-soft);color:var(--warn)}
+.p-leg{background:var(--sunk);color:var(--muted);border:1px solid var(--line)}
+.empty{font-size:13px;color:var(--muted);padding:6px 0}
+.link{color:var(--accent);font-size:12.5px}
+.log{padding:12px 16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);min-height:44px}
+.log b{color:var(--ink);font-weight:600}
+
+/* how and questions */
+.cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:860px){.cols3{grid-template-columns:1fr}}
+.note{padding:16px;display:grid;gap:8px;align-content:start}
+.note ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:14px}
+.note li::marker{color:var(--muted)}
+.qs{padding:16px}
+.qs ol{margin:8px 0 0;padding-left:20px;display:grid;gap:8px;font-size:14px}
+.qs li b{font-weight:600}
+.today-stamp{font:500 12px var(--mono);color:var(--muted)}
+@media (prefers-reduced-motion: no-preference){
+  .card{transition:background .25s,border-color .25s}
+  .flash{animation:flash 1.2s ease}
+  @keyframes flash{from{box-shadow:0 0 0 3px color-mix(in srgb,var(--primary) 45%,transparent)}to{box-shadow:0 0 0 0 transparent}}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Acornia &middot; Tasks &middot; proposal for Reshma</div>
+    <h1>Switch through an overnight fund</h1>
+    <p class="lede">Today a switch has one From and one To. Operations often go Equity &rarr; Overnight today, then Overnight &rarr; Equity a few days later, and raise those as two unrelated tasks. This demo shows one form that records both moves, files them as two linked tasks, and marks the first one Completed on its own, so admins can see it.</p>
+    <span class="demo-flag">Demo only. Nothing here reads from or writes to the CRM. The client and funds are samples.</span>
+  </header>
+
+  <!-- 1. the form -->
+  <section>
+    <div class="section-head">
+      <div class="eyebrow">Step 1</div>
+      <h2>Create Task &rsaquo; Switch, with the new route choice</h2>
+      <p>Everything below the route choice is today's form. Pick "Through an overnight fund" to see the third field appear.</p>
+    </div>
+    <div class="grid-2">
+      <form class="panel dialog" id="form" novalidate>
+        <div class="dialog-title"><h3>Create Task</h3><span class="today-stamp">Wed 23 Sep 2026</span></div>
+        <div class="tpl"><div><strong>&#10003; Switch</strong><small>Switch units from one scheme to another within the same AMC.</small></div><button type="button" class="btn" style="height:30px;font-size:13px" disabled>Change</button></div>
+
+        <div class="field">
+          <label class="lbl" for="investor">Investor <span class="req">*</span></label>
+          <select id="investor"><option>Demo Client (sample) &middot; code 100001</option></select>
+        </div>
+
+        <div class="box">
+          <h3>Switch details</h3>
+
+          <div class="field" style="margin:0">
+            <span class="lbl">Route <span class="new-tag">NEW</span></span>
+            <div class="route" role="radiogroup" aria-label="Route">
+              <label><span><input type="radio" name="route" id="route-direct" value="direct"><b>Direct</b></span><span>From &rarr; To, in one switch. As today.</span></label>
+              <label><span><input type="radio" name="route" id="route-via" value="via" checked><b>Through an overnight fund</b></span><span>From &rarr; Overnight today, Overnight &rarr; To a few days later.</span></label>
+            </div>
+          </div>
+
+          <div class="legs">
+            <div class="leg-row">
+              <div class="leg-dot">A</div>
+              <div class="field" style="margin:0">
+                <label class="lbl" for="from">From scheme (currently held) <span class="req">*</span></label>
+                <select id="from"></select>
+                <span class="hint" id="from-hint"></span>
+              </div>
+            </div>
+
+            <div class="leg-row" id="via-row">
+              <div class="leg-dot via">B</div>
+              <div class="field" style="margin:0">
+                <label class="lbl" for="via">Park in (overnight fund, same fund house) <span class="req">*</span> <span class="new-tag">NEW</span></label>
+                <select id="via"></select>
+                <span class="hint">Filled in with the fund house's own overnight fund; change it if you park in a liquid fund instead.</span>
+              </div>
+            </div>
+
+            <div class="leg-row">
+              <div class="leg-dot" id="to-dot">B</div>
+              <div class="field" style="margin:0">
+                <label class="lbl" for="to" id="to-label">Finally switch to (same fund house) <span class="req">*</span></label>
+                <select id="to"></select>
+                <span class="err" id="to-err" hidden></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="radios" role="radiogroup" aria-label="Switch by">
+            <label><input type="radio" name="by" id="by-amount" value="amount" checked>By amount</label>
+            <label><input type="radio" name="by" id="by-units" value="units">By units</label>
+            <label><input type="radio" name="by" id="by-all" value="all">All units</label>
+          </div>
+          <div class="field" style="margin:0" id="amount-field">
+            <label class="lbl" for="amount">Switch amount (INR) <span class="req">*</span></label>
+            <input type="number" id="amount" value="250000" min="1" step="1">
+          </div>
+
+          <div class="field" style="margin:0" id="gap-field">
+            <label class="lbl" for="gap">Second switch after <span class="new-tag">NEW</span></label>
+            <div class="days"><input type="number" id="gap" value="3" min="1" max="10"> <span>working days after switch 1 is marked Completed</span></div>
+            <span class="hint">Units in an overnight fund are usually allotted T+1, so the second switch waits until they show.</span>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="btn" disabled>Save as draft</button>
+          <button type="submit" class="btn primary" id="submit">Submit to Operations</button>
+        </div>
+      </form>
+
+      <aside class="panel plan" aria-live="polite">
+        <div class="eyebrow">What this will record</div>
+        <div class="flow" id="flow"></div>
+        <div class="tasks-made" id="made"></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 2. walk-through -->
+  <section>
+    <div class="section-head">
+      <div class="eyebrow">Step 2</div>
+      <h2>What Operations and the admins see, day by day</h2>
+      <p>Submit the form above, then press the buttons in order. The left side is the Operations list; the right side is Today &rsaquo; Completed as an admin or super admin sees it.</p>
+    </div>
+    <div class="panel">
+      <div class="clock">
+        <div class="day" id="day"></div>
+        <div class="steps-bar">
+          <button class="btn" id="do-leg1" type="button" disabled>Operations completes switch 1</button>
+          <button class="btn" id="do-advance" type="button" disabled>Move to the day switch 2 is due</button>
+          <button class="btn" id="do-leg2" type="button" disabled>Operations completes switch 2</button>
+          <button class="btn" id="do-reset" type="button">Start again</button>
+        </div>
+      </div>
+      <div class="walk">
+        <div class="col">
+          <div class="col-h"><h3>Operations: open tasks</h3><small id="open-count"></small></div>
+          <div id="open-list"></div>
+          <div class="col-h" id="later-h" hidden><h3>Filed, due later</h3><small id="later-count"></small></div>
+          <div id="later-list"></div>
+        </div>
+        <div class="col">
+          <div class="col-h"><h3>Admin: Today &rsaquo; Completed</h3><small id="done-count"></small></div>
+          <div id="done-list"></div>
+        </div>
+      </div>
+      <div class="log" id="log">Submit the form in Step 1 to begin.</div>
+    </div>
+  </section>
+
+  <!-- 3. how -->
+  <section>
+    <div class="section-head">
+      <div class="eyebrow">Step 3</div>
+      <h2>How we would build it</h2>
+      <p>Small, and built on what already exists. Nothing about a direct switch changes.</p>
+    </div>
+    <div class="cols3">
+      <div class="panel note">
+        <h3>On the form</h3>
+        <ul>
+          <li>A Route choice on the Switch template: Direct (today) or Through an overnight fund.</li>
+          <li>A "Park in" field, filled with the same fund house's overnight fund, changeable to a liquid fund.</li>
+          <li>A "second switch after N working days" box, 3 by default.</li>
+          <li>The same-fund-house rule checked on all three schemes.</li>
+        </ul>
+      </div>
+      <div class="panel note">
+        <h3>On the tasks</h3>
+        <ul>
+          <li>Submitting files switch 1 (From &rarr; Overnight) as a normal switch task, marked "1 of 2".</li>
+          <li>When switch 1 is marked Completed, switch 2 (Overnight &rarr; To, all units) is filed by itself, marked "2 of 2", dated N working days later, linked to switch 1.</li>
+          <li>Switch 2 uses the "switch in progress, not yet reflected" pick added on 21 Sep, so it does not wait for InvestWell.</li>
+        </ul>
+      </div>
+      <div class="panel note">
+        <h3>What admins see</h3>
+        <ul>
+          <li>Switch 1 appears in Today &rsaquo; Completed on the day it is done, as its own task.</li>
+          <li>Switch 2 appears on its due day and in Completed when done.</li>
+          <li>Each shows "1 of 2" / "2 of 2" and opens the other, so the whole move reads as one story.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel qs">
+    <h2>Questions for Reshma before we build</h2>
+    <ol>
+      <li><b>How many days</b> between the two switches: always 3 working days, or does it depend on the fund?</li>
+      <li><b>Always an overnight fund</b>, or sometimes a liquid fund? The demo lets them change it.</li>
+      <li><b>Switch 2 amount:</b> always all units that landed in the overnight fund? The demo assumes yes.</li>
+      <li><b>Who gets switch 2:</b> the same Operations person as switch 1? The demo assumes yes.</li>
+      <li><b>If switch 1 fails or is cancelled</b>, switch 2 is never filed. Is that right?</li>
+    </ol>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  "use strict";
+  // Sample client and funds. A switch stays inside one fund house, so the
+  // picker lists are keyed by it.
+  var HOLDINGS = [
+    { id: "bfc", amc: "Bandhan", name: "Bandhan Flexi Cap Fund Reg (G)", value: 412300 },
+    { id: "hho", amc: "HDFC", name: "HDFC Housing Opportunities Fund Reg (G)", value: 268950 },
+    { id: "mfe", amc: "Mirae Asset", name: "Mirae Asset ESG Sector Leaders Fund Reg (G)", value: 151800 }
+  ];
+  var OVERNIGHT = {
+    "Bandhan": ["Bandhan Overnight Fund Reg (G)", "Bandhan Liquid Fund Reg (G)"],
+    "HDFC": ["HDFC Overnight Fund Reg (G)", "HDFC Liquid Fund Reg (G)"],
+    "Mirae Asset": ["Mirae Asset Overnight Fund Reg (G)", "Mirae Asset Liquid Fund Reg (G)"]
+  };
+  var TARGETS = {
+    "Bandhan": ["Bandhan Small Cap Fund Reg (G)", "Bandhan Core Equity Fund Reg (G)", "Bandhan Sterling Value Fund Reg (G)"],
+    "HDFC": ["HDFC Flexi Cap Fund Reg (G)", "HDFC Mid-Cap Opportunities Fund Reg (G)", "HDFC Balanced Advantage Fund Reg (G)"],
+    "Mirae Asset": ["Mirae Asset Large & Midcap Fund Reg (G)", "Mirae Asset Midcap Fund Reg (G)"],
+    "Other fund house (for the check)": ["ICICI Prudential Bluechip Fund Reg (G)"]
+  };
+  var START = new Date(2026, 8, 23); // Wed 23 Sep 2026, the demo's today
+
+  var $ = function (id) { return document.getElementById(id); };
+  var fmtINR = function (n) { return "Rs " + Number(n).toLocaleString("en-IN"); };
+  var fmtDay = function (d) {
+    return d.toLocaleDateString("en-IN", { weekday: "short", day: "2-digit", month: "short", year: "numeric" });
+  };
+  var addWorkingDays = function (d, n) {
+    var x = new Date(d.getTime());
+    while (n > 0) { x.setDate(x.getDate() + 1); var w = x.getDay(); if (w !== 0 && w !== 6) n -= 1; }
+    return x;
+  };
+  var sameDay = function (a, b) { return a.toDateString() === b.toDateString(); };
+
+  // ---- the form ----
+  function holding() { return HOLDINGS.filter(function (h) { return h.id === $("from").value; })[0]; }
+  function route() { return document.querySelector('input[name="route"]:checked').value; }
+  function by() { return document.querySelector('input[name="by"]:checked').value; }
+
+  function fillFrom() {
+    $("from").innerHTML = HOLDINGS.map(function (h) {
+      return '<option value="' + h.id + '">' + h.name + " &middot; " + fmtINR(h.value) + "</option>";
+    }).join("");
+  }
+  function fillViaAndTo() {
+    var h = holding();
+    $("via").innerHTML = OVERNIGHT[h.amc].map(function (s) { return "<option>" + s + "</option>"; }).join("");
+    var groups = Object.keys(TARGETS).map(function (amc) {
+      return '<optgroup label="' + amc + '">' + TARGETS[amc].map(function (s) {
+        return '<option data-amc="' + amc + '"' + (amc === h.amc && s === TARGETS[amc][0] ? " selected" : "") + ">" + s + "</option>";
+      }).join("") + "</optgroup>";
+    });
+    $("to").innerHTML = groups.join("");
+    $("from-hint").textContent = "Fund house: " + h.amc + ". The other schemes must be " + h.amc + " schemes too.";
+  }
+  function toAmc() { var o = $("to").selectedOptions[0]; return o ? o.getAttribute("data-amc") : ""; }
+
+  function validate() {
+    var h = holding(), ok = true;
+    if (toAmc() !== h.amc) {
+      $("to-err").textContent = "A switch stays within one fund house. Pick a " + h.amc + " scheme, or raise a redemption and a purchase instead.";
+      $("to-err").hidden = false; ok = false;
+    } else { $("to-err").hidden = true; }
+    if (by() !== "all" && !(Number($("amount").value) > 0)) ok = false;
+    $("submit").disabled = !ok || state.submitted;
+    return ok;
+  }
+
+  function renderPlan() {
+    var via = route() === "via";
+    $("via-row").hidden = !via;
+    $("gap-field").hidden = !via;
+    $("to-dot").textContent = via ? "C" : "B";
+    $("to-label").firstChild.textContent = via ? "Finally switch to (same fund house) " : "To scheme (same fund house) ";
+    $("amount-field").hidden = by() === "all";
+    $("amount").previousElementSibling.firstChild.textContent = by() === "units" ? "Units to switch " : "Switch amount (INR) ";
+
+    var h = holding(), gap = Math.max(1, Number($("gap").value) || 3), what = by() === "all" ? "all units" : by() === "units" ? $("amount").value + " units" : fmtINR($("amount").value);
+    var stops = [
+      '<div class="stop"><i></i><div><div class="nm">' + h.name + '</div><div class="sub">held today</div></div></div>'
+    ];
+    if (via) {
+      stops.push('<div class="stop via"><i></i><div><div class="hop">switch 1 &middot; today &middot; ' + what + '</div><div class="nm">' + $("via").value + '</div><div class="sub">parked for about ' + gap + ' working days</div></div></div>');
+      stops.push('<div class="stop to"><i></i><div><div class="hop">switch 2 &middot; ' + gap + ' working days after switch 1 is done &middot; all units</div><div class="nm">' + $("to").value + '</div><div class="sub">where the money ends up</div></div></div>');
+    } else {
+      stops.push('<div class="stop to"><i></i><div><div class="hop">one switch &middot; today &middot; ' + what + '</div><div class="nm">' + $("to").value + '</div></div></div>');
+    }
+    $("flow").innerHTML = stops.join("");
+    $("made").innerHTML = via
+      ? '<div class="eyebrow">Tasks it will create</div>' +
+        '<div class="made"><span class="n">1 of 2</span><span>Filed now, sent to Operations. Counts as Completed on the day it is done.</span></div>' +
+        '<div class="made"><span class="n">2 of 2</span><span>Filed by itself when switch 1 is marked Completed, dated ' + gap + ' working days later.</span></div>'
+      : '<div class="eyebrow">Tasks it will create</div><div class="made"><span class="n">1 task</span><span>A single switch, exactly as today.</span></div>';
+    validate();
+  }
+
+  // ---- the walk-through ----
+  var state;
+  function reset() {
+    state = { submitted: false, today: new Date(START.getTime()), tasks: [], plan: null };
+    $("do-leg1").disabled = true; $("do-advance").disabled = true; $("do-leg2").disabled = true;
+    $("log").innerHTML = "Submit the form in Step 1 to begin.";
+    renderBoard(); validate();
+  }
+
+  function card(t, highlight) {
+    var pill = t.status === "done" ? '<span class="pill p-done">Completed</span>'
+      : t.status === "planned" ? '<span class="pill p-planned">Planned</span>'
+      : '<span class="pill p-assigned">Assigned</span>';
+    var leg = t.leg ? ' <span class="pill p-leg">' + t.leg + ' of 2</span>' : "";
+    var other = t.pairWith ? '<span class="link">Opens #' + t.pairWith + (t.leg === 1 ? " (switch 2)" : " (switch 1)") + "</span>" : "";
+    var when = t.status === "done" ? "Completed " + fmtDay(t.doneOn)
+      : t.status === "planned" ? "Filed when switch 1 is completed"
+      : "Due " + fmtDay(t.due);
+    return '<div class="card' + (t.status === "planned" ? " faded" : "") + (highlight ? " flash" : "") + '">' +
+      '<div class="card-top"><span class="tn">' + (t.number ? "#" + t.number : "not filed yet") + '</span><span>' + pill + leg + "</span></div>" +
+      '<div class="ttl">' + t.title + "</div>" +
+      '<div class="meta">' + t.detail + "</div>" +
+      '<div class="meta">' + when + " &middot; Demo Client (sample)</div>" + other + "</div>";
+  }
+
+  function renderBoard(fresh) {
+    $("day").innerHTML = fmtDay(state.today) + (sameDay(state.today, START) ? " <span>(today)</span>" : "");
+    var open = state.tasks.filter(function (t) { return t.status !== "done" && (t.status === "planned" || t.due <= state.today || sameDay(t.due, state.today)); });
+    var later = state.tasks.filter(function (t) { return t.status === "open" && t.due > state.today && !sameDay(t.due, state.today); });
+    $("later-h").hidden = later.length === 0;
+    $("later-list").innerHTML = later.map(function (t) { return card(t, fresh === t.id); }).join("");
+    $("later-count").textContent = later.length ? later.length + " filed" : "";
+    var done = state.tasks.filter(function (t) { return t.status === "done" && sameDay(t.doneOn, state.today); });
+    $("open-list").innerHTML = open.length ? open.map(function (t) { return card(t, fresh === t.id); }).join("") : '<p class="empty">Nothing open.</p>';
+    $("done-list").innerHTML = done.length ? done.map(function (t) { return card(t, fresh === t.id); }).join("") : '<p class="empty">Nothing completed on this day yet.</p>';
+    $("open-count").textContent = open.filter(function (t) { return t.status !== "planned"; }).length + " open";
+    $("done-count").textContent = done.length + " done";
+  }
+
+  $("form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!validate()) return;
+    var h = holding(), via = route() === "via", gap = Math.max(1, Number($("gap").value) || 3);
+    var what = by() === "all" ? "all units" : by() === "units" ? $("amount").value + " units" : fmtINR($("amount").value);
+    state.submitted = true; $("submit").disabled = true;
+    if (via) {
+      state.plan = { gap: gap, via: $("via").value, to: $("to").value };
+      state.tasks.push({ id: "a", number: 18901, leg: 1, pairWith: null, status: "open", due: new Date(START.getTime()),
+        title: "Switch: " + h.name.replace(" Reg (G)", "") + " → " + $("via").value.replace(" Reg (G)", ""),
+        detail: "Switch 1 of 2 &middot; " + what + " &middot; Urgent &middot; Operations" });
+      state.tasks.push({ id: "b", number: null, leg: 2, pairWith: 18901, status: "planned",
+        title: "Switch: " + $("via").value.replace(" Reg (G)", "") + " → " + $("to").value.replace(" Reg (G)", ""),
+        detail: "Switch 2 of 2 &middot; all units &middot; " + gap + " working days after switch 1" });
+      $("do-leg1").disabled = false;
+      $("log").innerHTML = "<b>Submitted.</b> Switch 1 is with Operations as task #18901. Switch 2 is planned and not filed yet.";
+      renderBoard("a");
+    } else {
+      state.tasks.push({ id: "a", number: 18901, leg: null, status: "open", due: new Date(START.getTime()),
+        title: "Switch: " + h.name.replace(" Reg (G)", "") + " → " + $("to").value.replace(" Reg (G)", ""),
+        detail: what + " &middot; Urgent &middot; Operations" });
+      $("do-leg1").disabled = false; $("do-leg1").textContent = "Operations completes the switch";
+      $("log").innerHTML = "<b>Submitted.</b> A single switch, #18901, exactly as today.";
+      renderBoard("a");
+    }
+    document.querySelector(".walk").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center" });
+  });
+
+  $("do-leg1").addEventListener("click", function () {
+    var a = state.tasks[0]; a.status = "done"; a.doneOn = new Date(state.today.getTime());
+    $("do-leg1").disabled = true;
+    if (!state.plan) {
+      $("log").innerHTML = "<b>Done.</b> The switch shows in Today &rsaquo; Completed for admins.";
+      renderBoard("a"); return;
+    }
+    var b = state.tasks[1];
+    b.status = "open"; b.number = 18902; b.due = addWorkingDays(state.today, state.plan.gap);
+    a.pairWith = 18902;
+    b.detail = "Switch 2 of 2 &middot; all units that landed in the overnight fund &middot; From shows “switch in progress (#18901), not yet reflected”";
+    $("do-advance").disabled = false;
+    $("log").innerHTML = "<b>Switch 1 completed.</b> It now counts in Today &rsaquo; Completed for the admins. Switch 2 was filed by itself as #18902, due " + fmtDay(b.due) + ".";
+    renderBoard("b");
+  });
+
+  $("do-advance").addEventListener("click", function () {
+    state.today = new Date(state.tasks[1].due.getTime());
+    $("do-advance").disabled = true; $("do-leg2").disabled = false;
+    $("log").innerHTML = "<b>" + fmtDay(state.today) + ".</b> Switch 2 is due today and sits in the Operations list. Switch 1 has left Completed because it was done on an earlier day.";
+    renderBoard("b");
+  });
+
+  $("do-leg2").addEventListener("click", function () {
+    var b = state.tasks[1]; b.status = "done"; b.doneOn = new Date(state.today.getTime());
+    $("do-leg2").disabled = true;
+    $("log").innerHTML = "<b>Switch 2 completed.</b> The money is in " + state.plan.to + ". Both tasks are Completed, each on its own day, each opening the other.";
+    renderBoard("b");
+  });
+
+  $("do-reset").addEventListener("click", function () {
+    $("do-leg1").textContent = "Operations completes switch 1";
+    reset(); renderPlan();
+    $("form").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+  });
+
+  ["from"].forEach(function (id) { $(id).addEventListener("change", function () { fillViaAndTo(); renderPlan(); }); });
+  ["via", "to", "amount", "gap"].forEach(function (id) { $(id).addEventListener("input", renderPlan); $(id).addEventListener("change", renderPlan); });
+  document.querySelectorAll('input[name="route"], input[name="by"]').forEach(function (r) { r.addEventListener("change", renderPlan); });
+
+  fillFrom(); fillViaAndTo(); reset(); renderPlan();
+})();
+</script>
+
+</body>
+</html>
